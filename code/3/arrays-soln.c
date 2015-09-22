@@ -11,5 +11,8 @@ int main(void)
     int primes[] = {2, 3, 5, 7, 11, 13};
     int num_primes = 6;
     
-    // code here
+    for (int i = num_primes - 3; i < num_primes; i++)
+    {
+        printf("%i\n", primes[i]);
+    }
 }
