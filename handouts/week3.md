@@ -5,8 +5,20 @@ Neel Mehta '18
 neelmehta@college.harvard.edu  
 (215) 990-6434  
 
+
+## Grading
+
+Psets are graded along the axes of:
+
+* **Scope: did you do every part of the pset?** (This is pretty easy to get full points on.)
+* **Correctness: does your code work?** We run tests on your programs and make sure they produce the desired output. Running `check50` is a great start.
+* **Design: did you solve the problem effectively?** This is subjective, but it's all about producing efficient, well-designed code. Ask me if you need pointers.
+* **Style: is your code well-formatted?** These should be easy points -- just make sure your programs pass `style50`.
+
+When I'm grading your psets, I'll focus more on qualitative feedback (comments) -- those matter more than the numerical score you get. Using my comments will probably be the best way for you to improve over the semester, which is what I care the most about.
+
 ## Resources
-* Walkthroughs (invaluable for psets)
+* C language reference: <https://reference.cs50.net/>
 * CS50 Study: <https://study.cs50.net/>
 * CS50 Discuss: <https://cs50.harvard.edu/discuss>
 * CS50 Style Guide: <https://manual.cs50.net/style/>
@@ -19,7 +31,7 @@ neelmehta@college.harvard.edu
 style50 my-file.c
 ```
 
-`check50` will run tests to make sure your program gives the expected output when given some input. Make sure your program passes all of its tests before you submit! Most psets have a check50; check the pset spec to find them!
+`check50` will run tests to make sure your program gives the expected output when given some input. Make sure your program passes all of its tests before you submit! Most psets have a `check50`; check the pset spec to find them!
 
 Generally, here's how I advise you approach psets:
 
@@ -39,13 +51,13 @@ Generally, here's how I advise you approach psets:
 ### The hardest parts of this pset
 
 * Getting your letter-rotating algorithm right. Work out the math on paper before you start coding.
-* All the little things: validating input, making sure your `for` loops don't miss any letters, etc.
+* All the little things: validating input, making sure you don't miss anything in your `for` loops, etc.
+
+## Loops
 
 ## Arrays
 
 ## Strings
-
-## Loops
 
 ## Command-line arguments
 
