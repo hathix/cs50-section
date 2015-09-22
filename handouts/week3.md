@@ -136,3 +136,106 @@ int main(int argc, string argv[])
 ```
 
 Notice that you'll need to change the *header* of `main` to include `int argc, string argv[]`. And notice that the arguments you give start at index 1, because index 0 is the program's name itself!
+
+# Challenges
+
+These are designed to be difficult. Work on these with a partner. Assume all necessary header files have been `#include`'d.
+
+ Solutions at <https://github.com/hathix/cs50-section/tree/master/code/3>.
+
+## Loops
+
+Print every multiple of 3 from 9 to 18 inclusive.
+
+```c
+int main(void)
+{
+
+
+
+
+
+
+
+
+
+}
+```
+
+## Arrays
+
+Print the last 3 elements of the given array. Use `num_primes` somehow. Should print 7, 11, and 13.
+
+```c
+int main(void)
+{
+    int primes[] = {2, 3, 5, 7, 11, 13};
+    int num_primes = 6;
+
+
+
+
+
+
+
+
+
+}
+```
+
+## Strings
+
+Print the given string, but reversed. Should print "dravraH".
+
+```c
+int main(void)
+{
+    string college = "Harvard";
+    int len = strlen(college);
+
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
+## Command-line arguments
+
+Print the given string the given number of times. Assume that the user gives you the right number of command-line arguments.
+
+For instance, if you run `./cla-challenge Hello 3`, this program should output:
+
+> Hello  
+> Hello  
+> Hello  
+
+```c
+int main(int argc, string argv[])
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
+*Hint: `atoi` is your friend. Look it up at <https://reference.cs50.net/>.*
