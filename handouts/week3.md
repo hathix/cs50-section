@@ -1,10 +1,17 @@
-# Neel Mehta's CS50 Section, Fall 2015
+# CS50 Section. Week 3. 9/22/15.
+*Neel Mehta*
 
 ## About me
 Neel Mehta '18  
 neelmehta@college.harvard.edu  
 (215) 990-6434  
 
+## Resources
+* C language reference: <https://reference.cs50.net/>
+* CS50 Study: <https://study.cs50.net/>
+* CS50 Discuss: <https://cs50.harvard.edu/discuss>
+* CS50 Style Guide: <https://manual.cs50.net/style/>
+* Handouts and practice problems: <https://github.com/hathix/cs50-section>
 
 ## Grading
 
@@ -16,13 +23,6 @@ Psets are graded along the axes of:
 * **Style: is your code well-formatted?** These should be easy points -- just make sure your programs pass `style50`.
 
 When I'm grading your psets, I'll focus more on qualitative feedback (comments) -- those matter more than the numerical score you get. Using my comments will probably be the best way for you to improve over the semester, which is what I care the most about.
-
-## Resources
-* C language reference: <https://reference.cs50.net/>
-* CS50 Study: <https://study.cs50.net/>
-* CS50 Discuss: <https://cs50.harvard.edu/discuss>
-* CS50 Style Guide: <https://manual.cs50.net/style/>
-* Handouts and practice problems: <https://github.com/hathix/cs50-section>
 
 ## General pset tips
 `style50` will make sure your style is OK. It's great at catching dumb syntax mistakes, so use it whenever you get strange compilation errors. And, of course, use it before you submit!
@@ -88,7 +88,7 @@ Here's the primary way to create an array:
 string my_classes[4];
 // you don't have to fill in all the elements of the array
 my_classes[0] = "CS50";
-my_classes[1] = "Ec10";
+my_classes[1] = "Ec 10";
 my_classes[2] = "Expos 20";
 my_classes[3] = "Math 55";
 ```
@@ -104,8 +104,8 @@ int important_years[] = {1636, 1776, 2015};
 You can access and change the elements of an array like this:
 
 ```c
-// prints "CS50" (without quotes)
-printf("%s\n", my_classes[0]);
+// prints "This is CS50." (without quotes)
+printf("This is %s.\n", my_classes[0]);
 
 // prints 1787
 important_years[1] = 1787;
