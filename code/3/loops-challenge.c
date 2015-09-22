@@ -1,10 +1,9 @@
 /**
- * Prints every character in the string on its own line.
+ * CHALLENGE! Print every multiple of 3 from 9 to 18 inclusive.
  */
 
 #include <stdio.h>
 #include <cs50.h>
-#include <string.h>
 
 int main(void)
 {
