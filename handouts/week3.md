@@ -53,12 +53,87 @@ Generally, here's how I advise you approach psets:
 * Getting your letter-rotating algorithm right. Work out the math on paper before you start coding.
 * All the little things: validating input, making sure you don't miss anything in your `for` loops, etc.
 
-## Loops
+## `for` Loops
+
+`for` loops are great for repeating blocks of code or for iterating over every element in an array.
+
+Here's an example of a for loop:
+
+```c
+// prints 0, 1, ... 9
+for (int i = 0; i < 10; i++)
+{
+    printf("%i\n", i);
+}
+```
+
+And a more advanced one:
+
+```c
+// prints 10, 15, ... 50
+for (int j = 10; j <= 50; j += 5)
+{
+    printf("%i\n", j);
+}
+```
 
 ## Arrays
 
+Arrays let you store a bunch of related pieces of data in a clean, organized way.
+
+Here's the primary way to create an array:
+
+```c
+// <datatype> <name>[<size>];
+string my_classes[4];
+// you don't have to fill in all the elements of the array
+my_classes[0] = "CS50";
+my_classes[1] = "Ec10";
+my_classes[2] = "Expos 20";
+my_classes[3] = "Math 55";
+```
+
+You can use this shorthand if you know all the elements of the array ahead of time:
+
+```c
+// <datatype> <name>[] = {elements};
+// notice that C will infer the size so you don't need to write it!
+int important_years[] = {1636, 1776, 2015};
+```
+
+You can access and change the elements of an array like this:
+
+```c
+// prints "CS50" (without quotes)
+printf("%s\n", my_classes[0]);
+
+// prints 1787
+important_years[1] = 1787;
+printf("%i\n", important_years[1]);
+```
+
 ## Strings
+
+Strings of text are really just arrays of characters. You can work with them just like normal arrays, for the most part:
+
+```c
+// prints "u" (without quotes)
+string band = "Young the Giant";
+char third_letter = band[2];
+printf("%c\n", third_letter);
+```
 
 ## Command-line arguments
 
-## Functions
+You know how you normally write `./program` to run a program? You can write more, e.g. `./program donuts`, to pass information ("arguments") into the program. Your program can then use these arguments!
+
+```c
+int main(int argc, string argv[])
+{
+    // if the user types `./program donuts`,
+    // this will print "donuts" (without quotes)
+    printf("%s\n", argv[1]);
+}
+```
+
+Notice that you'll need to change the *header* of `main` to include `int argc, string argv[]`. And notice that the arguments you give start at index 1, because index 0 is the program's name itself!
