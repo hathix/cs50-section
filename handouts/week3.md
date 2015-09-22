@@ -93,11 +93,10 @@ my_classes[2] = "Expos 20";
 my_classes[3] = "Math 55";
 ```
 
-You can use this shorthand if you know all the elements of the array ahead of time:
+You can use this shorthand if you know all the elements of the array ahead of time. Notice that C will infer the array size for you, so you don't need to write it!
 
 ```c
 // <datatype> <name>[] = {elements};
-// notice that C will infer the size so you don't need to write it!
 int important_years[] = {1636, 1776, 2015};
 ```
 
