@@ -7,5 +7,11 @@
 
 int main(void)
 {
-    // code here
+    int numbers[] = {50, 51, 65, 43};
+    int n = 4;
+    
+    for (int i = 0; i < n; i++)
+    {
+        printf("%i\n", numbers[i]);
+    }
 }

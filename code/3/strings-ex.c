@@ -8,5 +8,11 @@
 
 int main(void)
 {
-    // code here
+    string name = "Thayer";
+    int len = strlen(name);
+    
+    for (int i = 0; i < len; i++)
+    {
+        printf("%c\n", name[i]);
+    }
 }
