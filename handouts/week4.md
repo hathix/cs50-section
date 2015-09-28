@@ -45,3 +45,18 @@ printf("%2i", x);
 ## General pset tips
 
 Make sure your pset passes `style50` and `check50` (i.e. doesn't generate any frowny faces.) You can't get full credit on correctness and style unless your code passes these!
+
+# Content
+
+## Algorithm cheatsheet
+
+Name | What it does | Worst-case | Best-case
+-----|--------------|------------|----------
+Linear search | Finds an element in a list by searching left-to-right | O(n) | Ω(1)
+Binary search | Finds an element in a sorted list using divide-and-conquer | O(log n) | Ω(1)
+Bubble sort | Sorts a list by bubbling biggest elements to end | O(n^2) | Ω(n)
+Selection sort | Sorts a list by moving smallest elements to front | O(n^2) | Ω(n^2)
+Insertion sort | Sorts a list by moving elements to properly sorted place | O(n^2) | Ω(n)
+Merge sort | Recursively sorts a list by partitioning and merging | O(n log n) | Ω(n log n)
+
+More at <http://www.bigocheatsheet.com/>.
