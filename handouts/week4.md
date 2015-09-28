@@ -39,7 +39,7 @@ Grab this handout at <http://is.gd/neel_cs50_4>.
 // if x == 12, this prints "12"
 // (the number before i indicates how many spaces to pad to)
 printf("%2i", x);
- ```
+```
 
 
 ## General pset tips
