@@ -181,6 +181,25 @@ float months_to_years(int months)
 
 By the way, if you were actually writing this code, you wouldn't include any of these comments. They're just for illustration here.
 
+## Binary search
+
+Binary search is a very
+
+![Binary search diagram](img/binary-search.png)
+
+```
+while there are still elements to search:
+    find middle element
+    if middle element = what we're looking for:
+        return true
+    if middle element < what we're looking for:
+        look in lower half
+    if middle element > what we're looking for:
+        look in upper half
+
+return false (give up)
+```
+
 ## Algorithm cheatsheet
 
 Name | What it does | Worst-case | Best-case
