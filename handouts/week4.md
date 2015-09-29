@@ -9,21 +9,14 @@ Grab this handout at <http://is.gd/neel_cs50_4>.
 
 # pset3 tips
 
-## Search
-
-* For generate.c, make sure your comments describe *why* the code is doing what it's doing, not just *what* it's doing.
-
-
 ## Sort
 
 * Try implementing all 3 sorting algorithms we discussed (bubble, insertion, selection.)
-* For what it's worth, insertion sort is the easiest to implement.
 * You can test your sorting function in the same way you tested search (i.e. using `./generate` and `./find`.) But also test some edge cases like entering zero or one haystack elements.   
 
 ## Game of Fifteen
 
-* Implement functions in order of `init`, `draw`, `move`, `won`. You can start testing the game a little once you're done `draw`, and more fully once you're done `move`.
-* Don't touch anything outside those 4 functions! CS50 says you can if you want to, but you don't need to and changing things will only break stuff.
+* Implement functions in order of `init`, `draw`, `move`, `won`. You can start testing the game a little once you're done `draw`, and more fully once you're done `move`.]
 * Know that, for a 2-dimensional array, you access the row first, then the column. In other words, you go down and then right. For instance, `board[2][3]` goes down 2 spaces and right 3 spaces.
 * To print out a number with padding, try
 
@@ -33,7 +26,6 @@ Grab this handout at <http://is.gd/neel_cs50_4>.
 // (the number before i indicates how many spaces to pad to)
 printf("%2i", x);
 ```
-
 
 ## General pset tips
 
@@ -54,7 +46,7 @@ c | count | coins
 
 Two big things to remember:
 
-* Don't use single letters except `i`, `j`, and `k` in loops. Single letters aren't descriptive at all. This isn't math class!
+* Don't use single letters except `i`, `j`, and `k` in loops. Single letters aren't descriptive at all.
 * Abstract names like "count" are OK, but concrete names like "coins" are better. Think this in your head: "What am I counting here? I'm counting *coins*, so I better call the variable 'coins'."
 
 Quick! What is this code calculating?
@@ -81,22 +73,7 @@ int profit = revenue - car_production_price * cars_sold;
 
 Good variable names go a long way toward making your code more readable, but comments are another really important way to communicate. It's better to have too many comments than too few comments, but make sure your comments are explaining *why* your code is doing what it's doing, not just *what* it's doing.
 
-Consider this un-commented code. It's not immediately obvious what this code is doing or why there are all these `+1`s and `-1`s floating around.
-
-```c
-string original = "Cambridge";
-int length = strlen(original);
-char reversed[length + 1];
-
-for (int i = 0; i < length; i++)
-{
-    reversed[length - i - 1] = original[i];
-}
-
-reversed[length] = '\0';
-```
-
-Now consider the code with some **OK comments** that just describe *what* you're doing:
+Here's a snippet of code that has some **OK comments**. They're not very helpful because it's self-evident from the code what the code is doing.
 
 ```c
 string original = "Cambridge";
@@ -116,9 +93,7 @@ for (int i = 0; i < length; i++)
 reversed[length] = '\0';
 ```
 
-This is certainly better, but these comments don't help us much because it's self-evident from the code what the code is doing.
-
-Now consider the code with some **good comments** that describe your high-level strategy and *why* you're doing what you're doing:
+Now consider the code with some **good comments** that describe your high-level strategy and logic and *why* you're doing what you're doing. This makes your logic and approach much easier to understand without rehashing the details of what each line of code is doing.
 
 ```c
 // reverse the string `original` into the string `reversed`
@@ -138,9 +113,7 @@ for (int i = 0; i < length; i++)
 reversed[length] = '\0';
 ```
 
-This makes your logic and approach much easier to understand without rehashing the details of what each line of code is doing.
-
-# Content
+# Notes
 
 ## Function prototypes
 
@@ -152,8 +125,7 @@ Say you want to use a function besides `main`. It's not enough to just write the
 // function prototype
 // <return type> <name>(<argument type>, ...)
 // this is the same as in the function definition, except you don't
-// specify the argument names, and you end with a semicolon instead of
-// defining what the function does
+// specify the argument names
 float months_to_years(int);
 
 int main(void)
@@ -177,8 +149,6 @@ By the way, if you were actually writing this code, you wouldn't include any of 
 ## Binary search
 
 Binary search finds a value in a *sorted* array. You cut the problem in half at each stage by eliminating the half of the array that couldn't possibly contain the element you're looking for.
-
-It's so much better than linear search that people who want to search an array sometimes sort it just to be able to use binary search!
 
 ![Binary search visualization](img/binary-search.png)
 
@@ -265,3 +235,116 @@ Insertion sort | Sorts a list by moving elements to properly sorted place | O(n^
 Merge sort | Recursively sorts a list by partitioning and merging | O(n log n) | Ω(n log n)
 
 More at <http://www.bigocheatsheet.com/>.
+
+# Challenges
+
+Solutions at <https://github.com/hathix/cs50-section/blob/master/code/4>.
+
+## Binary search
+
+```c
+bool search(int value, int values[], int n)
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
+## Bubble sort
+
+```c
+void bubble_sort(int array[], int n)
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
+## Selection sort
+
+```c
+void selection_sort(int array[], int n)
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
+## Insertion sort
+
+```c
+void insertion_sort(int array[], int n)
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
+##  Merge sort
+
+It's a ilttle too complicated to work out on paper, so try it on your own at <https://github.com/hathix/cs50-section/blob/master/code/4/sort-challenge.c>!
