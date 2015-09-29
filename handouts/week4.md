@@ -7,6 +7,15 @@
 
 Grab this handout at <http://is.gd/neel_cs50_4>.
 
+# Important links
+
+* These handouts and practice problems: <https://github.com/hathix/cs50-section/>
+* Sorting algorithm visualizations: <http://www.sorting-algorithms.com/>
+* C language reference: https://reference.cs50.net/
+* CS50 Study: https://study.cs50.net/
+* CS50 Discuss: https://cs50.harvard.edu/discuss
+* CS50 Style Guide: https://manual.cs50.net/style/
+
 # pset3 tips
 
 ## Sort
@@ -16,8 +25,7 @@ Grab this handout at <http://is.gd/neel_cs50_4>.
 
 ## Game of Fifteen
 
-* Implement functions in order of `init`, `draw`, `move`, `won`. You can start testing the game a little once you're done `draw`, and more fully once you're done `move`.]
-* Know that, for a 2-dimensional array, you access the row first, then the column. In other words, you go down and then right. For instance, `board[2][3]` goes down 2 spaces and right 3 spaces.
+* Implement functions in order of `init`, `draw`, `move`, `won`. You can start testing the game a little once you're done `draw`, and more fully once you're done `move`.
 * To print out a number with padding, try
 
 ```c
@@ -29,13 +37,13 @@ printf("%2i", x);
 
 ## General pset tips
 
-Make sure your pset passes `style50` and `check50` (i.e. doesn't generate any frowny faces.) You can't get full credit on correctness and style unless your code passes these!
+**Make sure your pset passes `style50` and `check50` (i.e. doesn't generate any frowny faces.) You can't get full credit on correctness and style unless your code passes these!**
 
 # Suggestions from last pset
 
 ## Use descriptive variable names!
 
-Remember when we were counting coins in greedy.c? We had to use several variables, including those to track how much money we had left and how many coins we'd used so far. It's important to give variables descriptive names so that your code is easy to read and understand.
+It's important to give your variables descriptive names so your code is easy to read and understand. Here are some variable names you could have used in greedy.c:
 
 Bad name | OK name | Good name
 ---------|---------|----------
@@ -46,8 +54,8 @@ c | count | coins
 
 Two big things to remember:
 
-* Don't use single letters except `i`, `j`, and `k` in loops. Single letters aren't descriptive at all.
-* Abstract names like "count" are OK, but concrete names like "coins" are better. Think this in your head: "What am I counting here? I'm counting *coins*, so I better call the variable 'coins'."
+* Don't use single-letter variables except `i`, `j`, and `k` in loops. Single letters aren't descriptive at all.
+* Abstract names like "count" are OK, but concrete names like "coins" are better -- they make it clear what you're dealing with.
 
 Quick! What is this code calculating?
 
@@ -71,9 +79,9 @@ int profit = revenue - car_production_price * cars_sold;
 
 ## Use smart comments
 
-Good variable names go a long way toward making your code more readable, but comments are another really important way to communicate. It's better to have too many comments than too few comments, but make sure your comments are explaining *why* your code is doing what it's doing, not just *what* it's doing.
+Good variable names are a good start, but you need good comments to really make your code readable. It's better to have too many comments than too few comments, but make sure your comments are explaining *why* your code is doing what it's doing, not just *what* it's doing.
 
-Here's a snippet of code that has some **OK comments**. They're not very helpful because it's self-evident from the code what the code is doing.
+Here's a snippet of code that has some **OK comments**. They're not very helpful because it's evident from the code what it's doing.
 
 ```c
 string original = "Cambridge";
@@ -93,7 +101,7 @@ for (int i = 0; i < length; i++)
 reversed[length] = '\0';
 ```
 
-Now consider the code with some **good comments** that describe your high-level strategy and logic and *why* you're doing what you're doing. This makes your logic and approach much easier to understand without rehashing the details of what each line of code is doing.
+Now consider the code with some **good comments** that describe your high-level strategy and *why* you're doing what you're doing. This makes your logic and approach much easier to understand without rehashing the details of what each line of code is doing.
 
 ```c
 // reverse the string `original` into the string `reversed`
@@ -145,6 +153,46 @@ float months_to_years(int months)
 ```
 
 By the way, if you were actually writing this code, you wouldn't include any of these comments. They're just for illustration here.
+
+## 2D arrays
+
+These are really important for the Game of Fifteen. 2D arrays behave kinda like the coordinate grid except that:
+
+* The origin ([0][0]) is in the top left
+* You count down, then right.
+
+[0][0] | [0][1] | [0][2]
+-------|--------|-------
+[1][0] | [1][1] | [1][2]
+[2][0] | [2][1] | [2][2]
+
+
+How you might work with a 2D array:
+
+```c
+// creates a 2D array with 3 rows and 4 columns
+int width = 4;
+int height = 3;
+int grid[height][width];
+
+// this will fill the grid like such:
+//  0   1   2   3
+// 10  11  12  13
+// 20  21  22  23
+for (int i = 0; i < height; i++)
+{
+    for (int j = 0; j < width; j++)
+    {
+        grid[i][j] = 10 * i + j;
+    }
+}
+
+// prints 0
+printf("%i\n", grid[0][0]);
+// prints 23
+printf("%i\n", grid[height - 1][width - 1]);
+```
+
 
 ## Binary search
 
