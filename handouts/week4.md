@@ -77,11 +77,11 @@ int revenue = car_sales_price * cars_sold;
 int profit = revenue - car_production_price * cars_sold;
 ```
 
-## Use smart comments
+## Comments: explain why, not what
 
-Good variable names are a good start, but you need good comments to really make your code readable. It's better to have too many comments than too few comments, but make sure your comments are explaining *why* your code is doing what it's doing, not just *what* it's doing.
+It's good to have a lot of comments, but make sure your comments are explaining *why* your code is doing what it's doing, not just *what* it's doing.
 
-Here's a snippet of code that has some **OK comments**. They're not very helpful because it's evident from the code what it's doing.
+The comments in the below snippet aren't very good, because they just repeat what the code is doing, and that much is obvious just from reading the code:
 
 ```c
 string original = "Cambridge";
@@ -101,7 +101,7 @@ for (int i = 0; i < length; i++)
 reversed[length] = '\0';
 ```
 
-Now consider the code with some **good comments** that describe your high-level strategy and *why* you're doing what you're doing. This makes your logic and approach much easier to understand without rehashing the details of what each line of code is doing.
+The comments in the below snippet are much better, because they explain your high-level strategy nd make your logic clearer.
 
 ```c
 // reverse the string `original` into the string `reversed`
@@ -192,7 +192,6 @@ printf("%i\n", grid[0][0]);
 // prints 23
 printf("%i\n", grid[height - 1][width - 1]);
 ```
-
 
 ## Binary search
 
@@ -305,7 +304,6 @@ bool search(int value, int values[], int n)
 
 
 
-
 }
 ```
 
@@ -314,8 +312,6 @@ bool search(int value, int values[], int n)
 ```c
 void bubble_sort(int array[], int n)
 {
-
-
 
 
 
@@ -360,8 +356,6 @@ void selection_sort(int array[], int n)
 
 
 
-
-
 }
 ```
 
@@ -388,11 +382,9 @@ void insertion_sort(int array[], int n)
 
 
 
-
-
 }
 ```
 
 ##  Merge sort
 
-It's a ilttle too complicated to work out on paper, so try it on your own at <https://github.com/hathix/cs50-section/blob/master/code/4/sort-challenge.c>!
+Try it on your own at <https://github.com/hathix/cs50-section/blob/master/code/4/sort-challenge.c>!
