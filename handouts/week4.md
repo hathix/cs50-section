@@ -7,13 +7,6 @@
 
 Grab this handout at <http://is.gd/neel_cs50_4>.
 
-## Resources
-* C language reference: <https://reference.cs50.net/>
-* CS50 Study: <https://study.cs50.net/>
-* CS50 Discuss: <https://cs50.harvard.edu/discuss>
-* CS50 Style Guide: <https://manual.cs50.net/style/>
-* These handouts and practice problems: <https://github.com/hathix/cs50-section>
-
 # pset3 tips
 
 ## Search
@@ -183,9 +176,11 @@ By the way, if you were actually writing this code, you wouldn't include any of 
 
 ## Binary search
 
-Binary search is a very
+Binary search finds a value in a *sorted* array. You cut the problem in half at each stage by eliminating the half of the array that couldn't possibly contain the element you're looking for.
 
-![Binary search diagram](img/binary-search.png)
+It's so much better than linear search that people who want to search an array sometimes sort it just to be able to use binary search!
+
+![Binary search visualization](img/binary-search.png)
 
 ```
 while there are still elements to search:
@@ -198,6 +193,64 @@ while there are still elements to search:
         look in upper half
 
 return false (give up)
+```
+
+## Bubble sort
+
+In a sorted array, every element will be smaller than the one to its right, so this sort swaps two neighboring elements if they're out of order. This way, the biggest elements end up *bubbling* to the top.
+
+![Bubble sort visualization](img/bubble-sort.png)
+
+```
+for each element X in the array:
+    for each remaining element Y in array:
+        swap X and Y if X > Y
+```
+
+## Selection sort
+
+This sort *selects* the smallest elements remaining in the array and swaps them so they're in the front.
+
+![Selection sort visualization](img/selection-sort.jpg)
+
+```
+for each element in the array:
+    find the smallest element in the rest of the array
+    swap that element with the current element
+```
+
+## Insertion sort
+
+This sort sorts the array as it sees it, *inserting* each element in its proper place in the array.
+
+![Insertion sort visualization](img/insertion-sort.gif)
+
+```
+for each element in the array:
+    look at the element X directly to our right
+    shift all elements on our left to the right if they're > X
+    put X in the vacated spot
+```
+
+## Merge sort
+
+This sort recursively sorts its sub-arrays and then *merges* them together to produce one larger sorted sub-array.
+
+![Merge sort visualization](img/merge-sort.png)
+
+```
+function sort:
+    sort left half
+    sort right half
+    merge two halves
+
+function merge:
+    create temporary array
+    while elements in left & right sub-arrays:
+        compare first elements of two sub-arrays; place smaller one
+            in temp array
+    dump any remaining elements in longer sub-array in temp array
+    copy temp array onto original array
 ```
 
 ## Algorithm cheatsheet
