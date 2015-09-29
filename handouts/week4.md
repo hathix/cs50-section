@@ -12,7 +12,7 @@ Grab this handout at <http://is.gd/neel_cs50_4>.
 * CS50 Study: <https://study.cs50.net/>
 * CS50 Discuss: <https://cs50.harvard.edu/discuss>
 * CS50 Style Guide: <https://manual.cs50.net/style/>
-* These andouts and practice problems: <https://github.com/hathix/cs50-section>
+* These handouts and practice problems: <https://github.com/hathix/cs50-section>
 
 # pset3 tips
 
@@ -63,6 +63,89 @@ Two big things to remember:
 
 * Don't use single letters except `i`, `j`, and `k` in loops. Single letters aren't descriptive at all. This isn't math class!
 * Abstract names like "count" are OK, but concrete names like "coins" are better. Think this in your head: "What am I counting here? I'm counting *coins*, so I better call the variable 'coins'."
+
+Quick! What is this code calculating?
+
+```c
+int c = 30;
+int sp = 1500;
+int pp = 1200;
+int r = sp * c;
+int p = r - pp * c;
+```
+
+How about this code?
+
+```c
+int cars_sold = 30;
+int car_sales_price = 1500;
+int car_production_price = 1200;
+int revenue = car_sales_price * cars_sold;
+int profit = revenue - car_production_price * cars_sold;
+```
+
+## Use smart comments
+
+Good variable names go a long way toward making your code more readable, but comments are another really important way to communicate. It's better to have too many comments than too few comments, but make sure your comments are explaining *why* your code is doing what it's doing, not just *what* it's doing.
+
+Consider this un-commented code. It's not immediately obvious what this code is doing or why there are all these `+1`s and `-1`s floating around.
+
+```c
+string original = "Cambridge";
+int length = strlen(original);
+char reversed[length + 1];
+
+for (int i = 0; i < length; i++)
+{
+    reversed[length - i - 1] = original[i];
+}
+
+reversed[length] = '\0';
+```
+
+Now consider the code with some **OK comments** that just describe *what* you're doing:
+
+```c
+string original = "Cambridge";
+// find the string length
+int length = strlen(original);
+// make a new array that's the same size as the original (with 1 more spot)
+char reversed[length + 1];
+
+// go through every letter in the original string
+for (int i = 0; i < length; i++)
+{
+    // put a character from the original string in the reversed string
+    reversed[length - i - 1] = original[i];
+}
+
+// put a null character at the end of the reversed string
+reversed[length] = '\0';
+```
+
+This is certainly better, but these comments don't help us much because it's self-evident from the code what the code is doing.
+
+Now consider the code with some **good comments** that describe your high-level strategy and *why* you're doing what you're doing:
+
+```c
+// reverse the string `original` into the string `reversed`
+// e.g. "Cambridge" becomes "egdirbmaC"
+string original = "Cambridge";
+int length = strlen(original);
+// we need the extra slot for the null terminator
+char reversed[length + 1];
+
+for (int i = 0; i < length; i++)
+{
+    // fill in the reversed string back-to-front
+    // while moving front-to-back in original string
+    reversed[length - i - 1] = original[i];
+}
+
+reversed[length] = '\0';
+```
+
+This makes your logic and approach much easier to understand without rehashing the details of what each line of code is doing.
 
 # Content
 
