@@ -93,6 +93,72 @@ int sum(int numbers[], int length, int start_index)
 
 # Pointers
 
+## Quick review
+
+Say we ran this code:
+
+```c
+int a = 5;
+int pointer_a = &a;
+// assume pointer_a = 1776
+
+int b = 3;
+int pointer_b = &b;
+// assume pointer_b = 2015
+```
+
+Which of the following lines of code make sense? What do they do?
+
+```c
+a = 3;
+pointer_a = 3;
+b = a;
+pointer_b = pointer_a;
+pointer_b = &a;
+&a = b;
+*pointer_a = b;
+*a = b;
+*pointer_a = pointer_b;
+*pointer_a = &pointer_b;
+*pointer_a = *pointer_b;
+```
+
+## swap
+
+Finish this code that'll swap the values of two integers.
+
+```c
+void swap(int* a, int* b)
+{
+    // YOUR CODE HERE
+
+
+
+
+
+
+    // END YOUR CODE
+}
+
+int main(void)
+{
+    int x = 1;
+    int y = 2;
+
+    // prints "x = 1, y = 2"
+    printf("x = %i, y = %i\n", x, y);
+
+    // call your swap function
+    // YOUR CODE HERE
+
+
+    // END YOUR CODE
+
+    // prints "x = 2, y = 1"
+    printf("x = %i, y = %i\n", x, y);
+}
+```
+
 ## strlen (Fall 2013 Quiz 0)
 
 Suppose that you've forgotten which header file declares `strlen`, and so you need to re-implement it yourself. Bah. Even worse, neither `[` nor `]` currently works on your keyboard (or pencil or pen).  Without calling any functions at all  and without using any square brackets, complete the implementation of `strlen` below **using pointer arithmetic** in such a way that the function returns the length of `s`. If `s` happens to be `NULL`, your implementation of `strlen` should return 0.
