@@ -13,6 +13,26 @@ Check out the handout from our Quiz 0 Review: <https://github.com/hathix/cs50-se
 
 # Recursion
 
+## pow (Fall 2011 Quiz 0)
+
+Complete the implementation of `pow` below in such a way that the function returns x^y (i.e., `x` raised to the power of `y`) unless `x` or `y` (or both) is negative, in which case the function should instead return `-1`. Recall that, mathematically, x^0 is 1 and that x^1 is x. You needn't worry about integer overflow. Suffice it to say that you may not call the version of `pow` that's declared in `math.h`!
+
+Solution: <http://cdn.cs50.net/2011/fall/quizzes/0/key0.pdf>.
+
+```c
+int pow(int x, int y)
+{
+
+
+
+
+
+
+
+
+}
+```
+
 ## Fibonacci
 
 We can define the Fibonacci numbers as such:
@@ -71,26 +91,6 @@ int sum(int numbers[], int length, int start_index)
 }
 ```
 
-## pow (Fall 2011 Quiz 0)
-
-Complete the implementation of `pow` below in such a way that the function returns x^y (i.e., `x` raised to the power of `y`) unless `x` or `y` (or both) is negative, in which case the function should instead return `-1`. Recall that, mathematically, x^0 is 1 and that x^1 is x. You needn't worry about integer overflow. Suffice it to say that you may not call the version of `pow` that's declared in `math.h`!
-
-Solution: <http://cdn.cs50.net/2011/fall/quizzes/0/key0.pdf>.
-
-```c
-int pow(int x, int y)
-{
-
-
-
-
-
-
-
-
-}
-```
-
 # Pointers
 
 ## strlen (Fall 2013 Quiz 0)
@@ -129,9 +129,5 @@ int strlen(char* s)
 
 }
 ```
-
-
-# Recursion && Pointers
-
 
 # File I/O
