@@ -2,6 +2,7 @@
 
 /**
  * Calculates the `index`th Fibonacci number, zero-indexed.
+ * Use recursion -- no loops allowed!
  */
 int fibonacci(int index)
 {
