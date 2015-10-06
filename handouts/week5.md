@@ -17,8 +17,6 @@ Check out the handout from our Quiz 0 Review: <https://github.com/hathix/cs50-se
 
 Complete the implementation of `pow` below in such a way that the function returns x^y (i.e., `x` raised to the power of `y`) unless `x` or `y` (or both) is negative, in which case the function should instead return `-1`. Recall that, mathematically, x^0 is 1 and that x^1 is x. You needn't worry about integer overflow. Suffice it to say that you may not call the version of `pow` that's declared in `math.h`!
 
-Solution: <http://cdn.cs50.net/2011/fall/quizzes/0/key0.pdf>.
-
 ```c
 int pow(int x, int y)
 {
@@ -32,6 +30,8 @@ int pow(int x, int y)
 
 }
 ```
+
+Solution: <http://cdn.cs50.net/2011/fall/quizzes/0/key0.pdf>
 
 ## Fibonacci
 
@@ -67,6 +67,8 @@ int fibonacci(int index)
 }
 ```
 
+Solution: <https://github.com/hathix/cs50-section/blob/master/code/5/fibonacci-soln.c>
+
 ## Sums
 
 Write a recursive function `sum` that, given an array `numbers` of length `length`, finds the sum of the numbers starting at index `start_index`. **You can't use loops.**
@@ -90,6 +92,8 @@ int sum(int numbers[], int length, int start_index)
 
 }
 ```
+
+Solution: <https://github.com/hathix/cs50-section/blob/master/code/5/sums-soln.c>
 
 # Pointers
 
@@ -154,11 +158,11 @@ int main(void)
 }
 ```
 
+Solution: <https://github.com/hathix/cs50-section/blob/master/code/5/swap-soln.c>
+
 ## strlen (Fall 2013 Quiz 0)
 
 Suppose that you've forgotten which header file declares `strlen`, and so you need to re-implement it yourself. Bah. Even worse, neither `[` nor `]` currently works on your keyboard (or pencil or pen).  Without calling any functions at all  and without using any square brackets, complete the implementation of `strlen` below **using pointer arithmetic** in such a way that the function returns the length of `s`. If `s` happens to be `NULL`, your implementation of `strlen` should return 0.
-
-Solution: <http://cdn.cs50.net/2013/fall/quizzes/0/key0.pdf>.
 
 ```c
 int strlen(char* s)
@@ -190,5 +194,7 @@ int strlen(char* s)
 
 }
 ```
+
+Solution: <http://cdn.cs50.net/2013/fall/quizzes/0/key0.pdf>
 
 # File I/O
