@@ -2,7 +2,7 @@
 
 /**
  * Given an array `numbers` of length `length`, finds the sum of the numbers
- * starting at index `start_index`.
+ * starting at index `start_index`. Use recursion -- no loops allowed!
  */
 int sum(int numbers[], int length, int start_index)
 {
