@@ -1,4 +1,4 @@
-# CS50 Section. Week 4. 10/6/15.
+# CS50 Section. Week 5. 10/6/15.
 *Tuesdays 7:00-8:30pm, Science Center 309A*
 
 > Neel Mehta  
