@@ -102,6 +102,7 @@ Solution: <https://github.com/hathix/cs50-section/blob/master/code/5/sums-soln.c
 There are three fundamental pointer operations, illustrated here with `a`, `b`, and `c`. Explain what each operation does.
 
 **Dereference**
+
 ```c
 //
 //
@@ -109,6 +110,7 @@ int x = *a;
 ```
 
 **Address of**
+
 ```c
 //
 //
@@ -116,6 +118,7 @@ int* x = &b;
 ```
 
 **Assignment**
+
 ```c
 //
 //
@@ -214,6 +217,7 @@ fclose(file_pointer);
 <https://reference.cs50.net/stdio.h/fread>
 
 Reading into an array:
+
 ```c
 int length = 50;
 int destination[length];
@@ -221,6 +225,7 @@ fread(&destination, sizeof(int), length, file_pointer);
 ```
 
 Reading into a single variable:
+
 ```c
 int destination;
 fread(&destination, sizeof(int), 1, file_pointer);
@@ -231,6 +236,7 @@ fread(&destination, sizeof(int), 1, file_pointer);
 <https://reference.cs50.net/stdio.h/fwrite>
 
 Writing from an array:
+
 ```c
 int length = 50;
 int source[length];
@@ -238,6 +244,7 @@ fwrite(&source, sizeof(int), length, file_pointer);
 ```
 
 Writing from a single variable:
+
 ```c
 int source;
 fwrite(&source, sizeof(int), 1, file_pointer);
