@@ -200,6 +200,7 @@ Solution: <http://cdn.cs50.net/2013/fall/quizzes/0/key0.pdf>
 # File I/O
 
 **Opening and closing files**
+
 <https://reference.cs50.net/stdio.h/fopen>, <https://reference.cs50.net/stdio.h/fclose>
 
 ```c
@@ -209,6 +210,7 @@ fclose(file_pointer);
 ```
 
 **Reading from files**
+
 <https://reference.cs50.net/stdio.h/fread>
 
 Reading into an array:
@@ -225,6 +227,7 @@ fread(&destination, sizeof(int), 1, file_pointer);
 ```
 
 **Writing to files**
+
 <https://reference.cs50.net/stdio.h/fwrite>
 
 Writing from an array:
@@ -241,6 +244,7 @@ fwrite(&source, sizeof(int), 1, file_pointer);
 ```
 
 **Moving file pointer**
+
 <https://reference.cs50.net/stdio.h/fseek>
 
 ```c
