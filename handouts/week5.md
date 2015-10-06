@@ -47,11 +47,11 @@ Index   0  1  2  3  4  5
 Number  1  1  2  3  5  8
 ```
 
-Write a recursive function that calculates the nth Fibonacci number. **You can't use loops.**
+Write a recursive function that calculates the nth Fibonacci number. Assume  you'll only be given positive numbers. **You can't use loops.**
 
 * `fibonacci(5)` should return `8`
-* `fibonacci(0)` should return `0`
-* `fibonacci(-1)` should return `0`
+* `fibonacci(1)` should return `1`
+* `fibonacci(0)` should return `1`
 
 ```c
 int fibonacci(int index)
@@ -95,32 +95,27 @@ int sum(int numbers[], int length, int start_index)
 
 ## Quick review
 
-Say we ran this code:
+There are three fundamental pointer operations, illustrated here with `a`, `b`, and `c`. Explain what each operation does.
 
+**Dereference**
 ```c
-int a = 5;
-int pointer_a = &a;
-// assume pointer_a = 1776
-
-int b = 3;
-int pointer_b = &b;
-// assume pointer_b = 2015
+//
+//
+int x = *a;
 ```
 
-Which of the following lines of code make sense? What do they do?
-
+**Address of**
 ```c
-a = 3;
-pointer_a = 3;
-b = a;
-pointer_b = pointer_a;
-pointer_b = &a;
-&a = b;
-*pointer_a = b;
-*a = b;
-*pointer_a = pointer_b;
-*pointer_a = &pointer_b;
-*pointer_a = *pointer_b;
+//
+//
+int* x = &b;
+```
+
+**Assignment**
+```c
+//
+//
+*c = 5;
 ```
 
 ## swap
