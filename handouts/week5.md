@@ -198,3 +198,52 @@ int strlen(char* s)
 Solution: <http://cdn.cs50.net/2013/fall/quizzes/0/key0.pdf>
 
 # File I/O
+
+**Opening and closing files**
+<https://reference.cs50.net/stdio.h/fopen>, <https://reference.cs50.net/stdio.h/fclose>
+
+```c
+FILE* file_pointer = fopen(filename, "r");
+// do stuff
+fclose(file_pointer);
+```
+
+**Reading from files**
+<https://reference.cs50.net/stdio.h/fread>
+
+Reading into an array:
+```c
+int length = 50;
+int destination[length];
+fread(&destination, sizeof(int), length, file_pointer);
+```
+
+Reading into a single variable:
+```c
+int destination;
+fread(&destination, sizeof(int), 1, file_pointer);
+```
+
+**Writing to files**
+<https://reference.cs50.net/stdio.h/fwrite>
+
+Writing from an array:
+```c
+int length = 50;
+int source[length];
+fwrite(&source, sizeof(int), length, file_pointer);
+```
+
+Writing from a single variable:
+```c
+int source;
+fwrite(&source, sizeof(int), 1, file_pointer);
+```
+
+**Moving file pointer**
+<https://reference.cs50.net/stdio.h/fseek>
+
+```c
+int distance = 50;
+fseek(file_pointer, distance, SEEK_CUR);
+```
