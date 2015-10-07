@@ -2,7 +2,6 @@
 #include <cs50.h>
 
 /**
- * Binary search!
  * Returns true if value is in array of n values, else false.
  */
 bool search(int value, int values[], int n)
@@ -17,17 +16,11 @@ bool search(int value, int values[], int n)
         int middle = (upper + lower) / 2;
 
         if (values[middle] == value)
-        {
             return true;
-        }
         else if (values[middle] < value)
-        {
             lower = middle + 1;
-        }
         else if (values[middle] > value)
-        {
             upper = middle - 1;
-        }
     }
 
     return false;

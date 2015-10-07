@@ -7,7 +7,28 @@
  */
 void bubble_sort(int array[], int n)
 {
-    // your code here
+    // cycle through array
+    for(int k = 0; k < n - 1; k++)
+    {
+        // optimize; check if there are no swaps
+        int swaps = 0;
+
+        // swap adjacent elements if out of order
+        for(int i = 0; i < n - 1 - k; i++)
+        {
+            if (array[i] > array[i + 1])
+            {
+                int temp = array[i + 1];
+                array[i + 1] = array[i];
+                array[i] = temp;
+
+                swaps++;
+             }
+        }
+
+        if (!swaps)
+            break;
+    }
 }
 
 
@@ -16,7 +37,29 @@ void bubble_sort(int array[], int n)
  */
 void selection_sort(int array[], int size)
 {
-    // your code here
+    // iterate over array
+    for(int i = 0; i < size - 1; i++)
+    {
+        // smallest element and its position in sorted array
+        int smallest = array[i];
+        int position = i;
+
+        // unsorted part of array
+        for(int k = i + 1; k < size; k++)
+        {
+            // find the next smallest element
+            if (array[k] < smallest)
+            {
+                smallest = array[k];
+                position = k;
+            }
+        }
+
+        // swap
+        int temp = array[i];
+        array[i] = smallest;
+        array[position] = temp;
+    }
 }
 
 
@@ -25,7 +68,27 @@ void selection_sort(int array[], int size)
  */
 void insertion_sort(int array[], int size)
 {
-    // your code here
+    // iterate through unsorted part of array from l->r
+    for(int i = 1; i < size; i++)
+    {
+        // define the start of the sorted array
+        int j = i - 1;
+
+        // specify the next element to sort
+        int to_sort = array[i];
+
+        // iterate through sorted part of array from r->l
+        // figure out where in sorted portion to_sort should go
+        while(j >= 0 && to_sort < array[j])
+        {
+            // shift sorted elements rightward
+            array[j + 1] = array[j];
+            j--;
+        }
+
+        // insert element into sorted portion of array
+        array[j + 1] = to_sort;
+    }
 }
 
 
