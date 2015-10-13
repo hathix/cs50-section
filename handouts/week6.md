@@ -39,13 +39,52 @@ int strlen(char* s)
 
 
 
-
-
-
 }
 ```
 
 Solution: <http://cdn.cs50.net/2013/fall/quizzes/0/key0.pdf>
+
+# Stuff for your cheat sheet
+
+## Algorithms
+
+Name | What it does | Worst-case | Best-case
+-----|--------------|------------|----------
+Linear search | Finds an element in a list by searching left-to-right | O(n) | Ω(1)
+Binary search | Finds an element in a sorted list using divide-and-conquer | O(log n) | Ω(1)
+Bubble sort | Sorts a list by bubbling biggest elements to end | O(n^2) | Ω(n)
+Selection sort | Sorts a list by moving smallest elements to front | O(n^2) | Ω(n^2)
+Insertion sort | Sorts a list by moving elements to properly sorted place | O(n^2) | Ω(n)
+Merge sort | Recursively sorts a list by partitioning and merging | O(n log n) | Ω(n log n)
+
+More at <http://www.bigocheatsheet.com/>.
+
+## Data types
+
+The below are for a 64-bit machine (so named because pointers are 64 bits) like the CS50 IDE.
+
+**Type** | char | int | float | double | long long | int*
+---------|------|-----|-------|--------|-----------|------
+**Size (bytes)** | 1 | 4 | 4 | 8 | 8 | 8
+
+* Unsigned types are the same size as the normal types (e.g. `unsigned int`, like `int`, is 4 bytes)
+* All pointers are the same size (e.g. `double*`, like `int*`, is 8 bytes)
+
+## Useful functions
+
+![Table of common functions and their usage](img/standard-library.png)
+
+## Common errors
+
+Error | Why it happened
+------| ---------------
+undefined reference to 'function' | You forgot to call the linker with, e.g., `-lcs50`
+implicitly declaring library function | You forgot to `#include` the `.h` file
+implicit declaration of function 'function' is invalid | You forgot to `#include` the `.h` file
+more '%' conversions than data arguments | You called, e.g., `printf("%i and %i \n", 5)` (you passed 1 number but should have given 2)
+definitely lost: # bytes in # blocks | You forgot to `free` memory you allocated with `malloc`
+invalid write of size # | You tried changing a value beyond the end of an array
+use of undeclared identifier | You forgot to declare the variable, or it's out of scope
 
 ## File I/O
 
@@ -105,45 +144,3 @@ fwrite(&source, sizeof(int), 1, file_pointer);
 int distance = 50;
 fseek(file_pointer, distance, SEEK_CUR);
 ```
-
-# Stuff for your cheat sheet
-
-## Algorithms
-
-Name | What it does | Worst-case | Best-case
------|--------------|------------|----------
-Linear search | Finds an element in a list by searching left-to-right | O(n) | Ω(1)
-Binary search | Finds an element in a sorted list using divide-and-conquer | O(log n) | Ω(1)
-Bubble sort | Sorts a list by bubbling biggest elements to end | O(n^2) | Ω(n)
-Selection sort | Sorts a list by moving smallest elements to front | O(n^2) | Ω(n^2)
-Insertion sort | Sorts a list by moving elements to properly sorted place | O(n^2) | Ω(n)
-Merge sort | Recursively sorts a list by partitioning and merging | O(n log n) | Ω(n log n)
-
-More at <http://www.bigocheatsheet.com/>.
-
-## Data types
-
-The below are for a 64-bit machine (so named because pointers are 64 bits) like the CS50 IDE.
-
-**Type** | char | int | float | double | long long | int*
----------|------|-----|-------|--------|-----------|------
-**Size (bytes)** | 1 | 4 | 4 | 8 | 8 | 8
-
-* Unsigned types are the same size as the normal types (e.g. `unsigned int`, like `int`, is 4 bytes)
-* All pointers are the same size (e.g. `double*`, like `int*`, is 8 bytes)
-
-## Useful functions
-
-![Table of common functions and their usage](img/standard-library.png)
-
-## Common errors
-
-Error | Why it happened
-------| ---------------
-undefined reference to 'function' | You forgot to call the linker with, e.g., `-lcs50`
-implicitly declaring library function | You forgot to `#include` the `.h` file
-implicit declaration of function 'function' is invalid | You forgot to `#include` the `.h` file
-more '%' conversions than data arguments | You called, e.g., `printf("%i and %i \n", 5)` (you passed 1 number but should have given 2)
-definitely lost: # bytes in # blocks | You forgot to `free` memory you allocated with `malloc`
-invalid write of size # | You tried changing a value beyond the end of an array
-use of undeclared identifier | You forgot to declare the variable, or it's out of scope
