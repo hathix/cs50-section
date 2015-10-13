@@ -274,3 +274,11 @@ Insertion sort | Sorts a list by moving elements to properly sorted place | O(n^
 Merge sort | Recursively sorts a list by partitioning and merging | O(n log n) | Ω(n log n)
 
 More at <http://www.bigocheatsheet.com/>.
+
+## Data types
+
+The below are for a 64-bit machine (so named because pointers are 64 bits) like the CS50 IDE.
+
+**Type** | char | int | float | double | long long | int* | char*
+---------|------|-----|-------|--------|-----------|------|------
+**Size (bytes)** | 1 | 4 | 4 | 8 | 8 | 8 | 8
