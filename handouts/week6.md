@@ -10,13 +10,32 @@ Get these handouts at <https://github.com/hathix/cs50-section/tree/master/handou
 
 # Practice problems
 
-## Functions (Fall 2014 #17)
+## odd (Fall 2014 #17)
 
 Complete the implementation of `odd` below in such a way that the function returns `true` if `n` is odd and `false` if `n` is even.
 
 ```c
 bool odd(unsigned int n)
 {
+
+
+
+
+
+}
+```
+
+## GetRandom (Fall 2011 #13)
+
+C comes with `rand`, which returns a pseudorandom `int` specifically between `0` and `RAND_MAX`, inclusive, where `RAND_MAX` is a large, positive constant. If only there were a way to generate a pseudorandom number in C between any two values! Complete the implementation of `GetRandom` below in such a way that it uses `rand` but returns a pseudorandom `int` between `min` and `max`, inclusive. You may assume that both `min` and `max` will be non-negative and less than or equal to `RAND_MAX`. And you may assume that `max` will be greater than or equal to `min`. You needn't worry about seeding. And no need to `#include` any header files (e.g. `stdlib.h`, in which `rand` is declared.)
+
+```c
+int GetRandom(int min, int max)
+{
+    int n = rand();
+
+
+
 
 
 
@@ -32,9 +51,6 @@ Suppose that you've forgotten which header file declares `strlen`, and so you ne
 ```c
 int strlen(char* s)
 {
-
-
-
 
 
 
