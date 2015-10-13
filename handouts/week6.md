@@ -1,5 +1,5 @@
 # CS50 Section. Week 6. Quiz 0 Review. 10/13/15.
-*Tuesdays 7:00-8:30pm, Science Center 309A*
+*Tuesdays 7:00-8:30pm, Science Center 309A*  
 *<https://github.com/hathix/cs50-section>*
 
 > Neel Mehta  
