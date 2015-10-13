@@ -10,6 +10,21 @@ Get these handouts at <https://github.com/hathix/cs50-section/tree/master/handou
 
 # Practice problems
 
+## Functions (Fall 2014 #17)
+
+Complete the implementation of `odd` below in such a way that the function returns `true` if `n` is odd and `false` if `n` is even.
+
+```c
+bool odd(unsigned int n)
+{
+
+
+
+
+
+}
+```
+
 ## strlen (Fall 2013 #10)
 
 Suppose that you've forgotten which header file declares `strlen`, and so you need to re-implement it yourself. Bah. Even worse, neither `[` nor `]` currently works on your keyboard (or pencil or pen).  Without calling any functions at all  and without using any square brackets, complete the implementation of `strlen` below **using pointer arithmetic** in such a way that the function returns the length of `s`. If `s` happens to be `NULL`, your implementation of `strlen` should return 0.
@@ -108,7 +123,6 @@ int main(void)
 
 Atop some of this program's lines are placeholders for comments. Next to each such `//`, explain in precise (but succinct) technical terms what the line immediately below it is doing. Write on the program itself.
 
-## Binary (Fall 2011 #16)
 
 # Stuff for your cheat sheet
 
