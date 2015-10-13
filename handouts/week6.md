@@ -8,161 +8,7 @@
 
 Get these handouts at <https://github.com/hathix/cs50-section/tree/master/handouts>.
 
-# Quiz 0
-
-Check out the handout from our Quiz 0 Review: <https://github.com/hathix/cs50-section/blob/master/handouts/quiz0-review.md>.
-
-# Recursion
-
-## pow (Fall 2011 Quiz 0)
-
-Complete the implementation of `pow` below in such a way that the function returns x^y (i.e., `x` raised to the power of `y`) unless `x` or `y` (or both) is negative, in which case the function should instead return `-1`. Recall that, mathematically, x^0 is 1 and that x^1 is x. You needn't worry about integer overflow. Suffice it to say that you may not call the version of `pow` that's declared in `math.h`!
-
-```c
-int pow(int x, int y)
-{
-
-
-
-
-
-
-
-
-}
-```
-
-Solution: <http://cdn.cs50.net/2011/fall/quizzes/0/key0.pdf>
-
-## Fibonacci
-
-We can define the Fibonacci numbers as such:
-
-* The 0th and 1st Fibonacci numbers are both 1.
-* Every subsequent Fibonacci number is the sum of the previous 2 Fibonacci numbers.
-
-So the first few Fibonacci numbers are:
-
-```
-Index   0  1  2  3  4  5
-Number  1  1  2  3  5  8
-```
-
-Write a recursive function that calculates the nth Fibonacci number. Assume  you'll only be given positive numbers. **You can't use loops.**
-
-* `fibonacci(5)` should return `8`
-* `fibonacci(1)` should return `1`
-* `fibonacci(0)` should return `1`
-
-```c
-int fibonacci(int index)
-{
-
-
-
-
-
-
-
-
-}
-```
-
-Solution: <https://github.com/hathix/cs50-section/blob/master/code/5/fibonacci-soln.c>
-
-## Sums
-
-Write a recursive function `sum` that, given an array `numbers` of length `length`, finds the sum of the numbers starting at index `start_index`. **You can't use loops.**
-
-If `int x[] = {5, 6, 7}` and `int y[] = {}`, then:
-
-* `sum(x, 3, 0)` should return `18` (5 + 6 + 7)
-* `sum(x, 3, 1)` should return `13` (6 + 7)
-* `sum(y, 0, 0)` should return `0`
-
-```c
-int sum(int numbers[], int length, int start_index)
-{
-
-
-
-
-
-
-
-
-}
-```
-
-Solution: <https://github.com/hathix/cs50-section/blob/master/code/5/sums-soln.c>
-
-# Pointers
-
-## Quick review
-
-There are three fundamental pointer operations, illustrated here with `a`, `b`, and `c`. Explain what each operation does.
-
-**Dereference**
-
-```c
-//
-//
-int x = *a;
-```
-
-**Address of**
-
-```c
-//
-//
-int* x = &b;
-```
-
-**Assignment**
-
-```c
-//
-//
-*c = 5;
-```
-
-## swap
-
-Finish this code that'll swap the values of two integers.
-
-```c
-void swap(int* a, int* b)
-{
-    // YOUR CODE HERE
-
-
-
-
-
-
-    // END YOUR CODE
-}
-
-int main(void)
-{
-    int x = 1;
-    int y = 2;
-
-    // prints "x = 1, y = 2"
-    printf("x = %i, y = %i\n", x, y);
-
-    // call your swap function
-    // YOUR CODE HERE
-
-
-    // END YOUR CODE
-
-    // prints "x = 2, y = 1"
-    printf("x = %i, y = %i\n", x, y);
-}
-```
-
-Solution: <https://github.com/hathix/cs50-section/blob/master/code/5/swap-soln.c>
+# Practice problems
 
 ## strlen (Fall 2013 Quiz 0)
 
@@ -201,7 +47,7 @@ int strlen(char* s)
 
 Solution: <http://cdn.cs50.net/2013/fall/quizzes/0/key0.pdf>
 
-# File I/O
+## File I/O
 
 **Opening and closing files**
 
@@ -279,9 +125,12 @@ More at <http://www.bigocheatsheet.com/>.
 
 The below are for a 64-bit machine (so named because pointers are 64 bits) like the CS50 IDE.
 
-**Type** | char | int | float | double | long long | int* | char*
----------|------|-----|-------|--------|-----------|------|------
-**Size (bytes)** | 1 | 4 | 4 | 8 | 8 | 8 | 8
+**Type** | char | int | float | double | long long | int*
+---------|------|-----|-------|--------|-----------|------
+**Size (bytes)** | 1 | 4 | 4 | 8 | 8 | 8
+
+* Unsigned types are the same size as the normal types (e.g. `unsigned int`, like `int`, is 4 bytes)
+* All pointers are the same size (e.g. `double*`, like `int*`, is 8 bytes)
 
 ## Useful functions
 
@@ -293,6 +142,8 @@ Error | Why it happened
 ------| ---------------
 undefined reference to 'function' | You forgot to call the linker with, e.g., `-lcs50`
 implicitly declaring library function | You forgot to `#include` the `.h` file
+implicit declaration of function 'function' is invalid | You forgot to `#include` the `.h` file
 more '%' conversions than data arguments | You called, e.g., `printf("%i and %i \n", 5)` (you passed 1 number but should have given 2)
 definitely lost: # bytes in # blocks | You forgot to `free` memory you allocated with `malloc`
 invalid write of size # | You tried changing a value beyond the end of an array
+use of undeclared identifier | You forgot to declare the variable, or it's out of scope
