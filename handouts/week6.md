@@ -10,7 +10,7 @@ Get these handouts at <https://github.com/hathix/cs50-section/tree/master/handou
 
 # Practice problems
 
-## strlen (Fall 2013 Quiz 0)
+## strlen (Fall 2013 #10)
 
 Suppose that you've forgotten which header file declares `strlen`, and so you need to re-implement it yourself. Bah. Even worse, neither `[` nor `]` currently works on your keyboard (or pencil or pen).  Without calling any functions at all  and without using any square brackets, complete the implementation of `strlen` below **using pointer arithmetic** in such a way that the function returns the length of `s`. If `s` happens to be `NULL`, your implementation of `strlen` should return 0.
 
@@ -43,6 +43,72 @@ int strlen(char* s)
 ```
 
 Solution: <http://cdn.cs50.net/2013/fall/quizzes/0/key0.pdf>
+
+## Pointers (Fall 2010 #29)
+
+Consider the code below.
+
+```c
+int i = 1;
+int j = 2;
+int k = 7;
+int* p = &j;
+*p += 1;
+```
+
+Complete the table below, specifying in the right-hand column exactly what would be printed by each call to `printf`, assuming `printf` is called after *all* of the lines above have been executed. As an example, we've filled in the first box for you.
+
+statement | what would be printed
+----------|----------------------
+`printf("%d", i)` | 1
+`printf("%d", j)` |   
+`printf("%d", *p)` |   
+`printf("%d", k)` |   
+
+## More Pointers (Fall 2012 #28)
+
+Recall the program below, which crashed when Binky tried to execute it.
+
+```c
+#include <stdlib.h>
+
+int main(void)
+{
+    //
+    //
+    int* x;
+
+    //
+    //
+    int* y;
+
+    //
+    //
+    x = malloc(sizeof(int));
+
+    //
+    //
+    *x = 42;
+
+    //
+    //
+    *y = 13;
+
+    //
+    //
+    y = x;
+
+    //
+    //
+    *y = 13;
+
+    return 0;
+}
+```
+
+Atop some of this program's lines are placeholders for comments. Next to each such `//`, explain in precise (but succinct) technical terms what the line immediately below it is doing. Write on the program itself.
+
+## Binary (Fall 2011 #16)
 
 # Stuff for your cheat sheet
 
