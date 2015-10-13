@@ -25,6 +25,8 @@ bool odd(unsigned int n)
 }
 ```
 
+Solution: <http://cdn.cs50.net/2014/fall/quizzes/0/key0.pdf>
+
 ## GetRandom (Fall 2011 #13)
 
 C comes with `rand`, which returns a pseudorandom `int` specifically between `0` and `RAND_MAX`, inclusive, where `RAND_MAX` is a large, positive constant. If only there were a way to generate a pseudorandom number in C between any two values! Complete the implementation of `GetRandom` below in such a way that it uses `rand` but returns a pseudorandom `int` between `min` and `max`, inclusive. You may assume that both `min` and `max` will be non-negative and less than or equal to `RAND_MAX`. And you may assume that `max` will be greater than or equal to `min`. You needn't worry about seeding. And no need to `#include` any header files (e.g. `stdlib.h`, in which `rand` is declared.)
@@ -43,6 +45,8 @@ int GetRandom(int min, int max)
 
 }
 ```
+
+Solution: <http://cdn.cs50.net/2011/fall/quizzes/0/key0.pdf>
 
 ## strlen (Fall 2013 #10)
 
@@ -96,6 +100,8 @@ statement | what would be printed
 `printf("%d", *p)` |   
 `printf("%d", k)` |   
 
+Solution: <http://cdn.cs50.net/2010/fall/quizzes/0/key0.pdf>
+
 ## More Pointers (Fall 2012 #28)
 
 Recall the program below, which crashed when Binky tried to execute it.
@@ -138,6 +144,8 @@ int main(void)
 ```
 
 Atop some of this program's lines are placeholders for comments. Next to each such `//`, explain in precise (but succinct) technical terms what the line immediately below it is doing. Write on the program itself.
+
+Solution: <http://cdn.cs50.net/2012/fall/quizzes/0/key0.pdf>
 
 
 # Stuff for your cheat sheet
