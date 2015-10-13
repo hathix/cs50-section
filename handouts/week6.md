@@ -68,7 +68,7 @@ Reading into an array:
 ```c
 int length = 50;
 int destination[length];
-fread(&destination, sizeof(int), length, file_pointer);
+fread(destination, sizeof(int), length, file_pointer);
 ```
 
 Reading into a single variable:
@@ -87,7 +87,7 @@ Writing from an array:
 ```c
 int length = 50;
 int source[length];
-fwrite(&source, sizeof(int), length, file_pointer);
+fwrite(source, sizeof(int), length, file_pointer);
 ```
 
 Writing from a single variable:
