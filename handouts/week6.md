@@ -282,3 +282,17 @@ The below are for a 64-bit machine (so named because pointers are 64 bits) like 
 **Type** | char | int | float | double | long long | int* | char*
 ---------|------|-----|-------|--------|-----------|------|------
 **Size (bytes)** | 1 | 4 | 4 | 8 | 8 | 8 | 8
+
+## Useful functions
+
+![Table of common functions and their usage](img/standard-library.png)
+
+## Common errors
+
+Error | Why it happened
+------| ---------------
+undefined reference to 'function' | You forgot to call the linker with, e.g., `-lcs50`
+implicitly declaring library function | You forgot to `#include` the `.h` file
+more '%' conversions than data arguments | You called, e.g., `printf("%i and %i \n", 5)` (you passed 1 number but should have given 2)
+definitely lost: # bytes in # blocks | You forgot to `free` memory you allocated with `malloc`
+invalid write of size # | You tried changing a value beyond the end of an array
