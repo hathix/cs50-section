@@ -1,5 +1,6 @@
 /*
  * General purpose string hash functions for C
+ * By Arash Partow, copied here by Neel Mehta
  *
  * Feel free to use these, but just cite the below in a comment:
  * http://www.partow.net/programming/hashfunctions/index.html

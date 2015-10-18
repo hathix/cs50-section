@@ -19,6 +19,9 @@ Get these handouts at <https://github.com/hathix/cs50-section/tree/master/handou
 
 Don't try writing your own hash function... just adapt one off the internet. Some places you can look:
 
+* My compilation of hash functions from around the internet: <https://github.com/hathix/cs50-section/blob/master/code/7/sample-hash-functions>
+* Random Stack Overflow questions like <http://stackoverflow.com/q/7666509> (search for "string hash functions for c")
+
 ## Random advice gathered from past TFs (might be a little advanced)
 
 * Use `#define BUCKETS` for the number of buckets in your hashtable
