@@ -14,8 +14,10 @@ Get these handouts at <https://github.com/hathix/cs50-section/tree/master/handou
 
 ## Choosing a good hash function
 
+You'll need a hash function for `load` and `check` -- something to assign words to buckets in your hashtable. Some specifications:
+
 * It must have a header like this: `unsigned int hash(char* word)`
-* Return an index that's less than the number of buckets, `BUCKETS` (mod `%` by `BUCKETS` to ensure this)
+* It must return an index that's less than the number of buckets, `BUCKETS` (mod `%` by `BUCKETS` to ensure this)
 
 Don't try writing your own hash function... just adapt one off the internet. Some places you can look:
 
@@ -32,4 +34,4 @@ Don't try writing your own hash function... just adapt one off the internet. Som
 * Avoid using `strlen` when possible because it's slow; if you're using a loop try to just compare each character to `\0`
 * Eliminate function calls when possible because they take up lots of time
 
-# Practice problems
+# More coming soon!
