@@ -64,6 +64,7 @@ void prepend(int i)
 bool contains(int needle)
 {
     // **YOUR CODE HERE**
+    return false;
 }
 
 int main(int argc, char* argv[])
