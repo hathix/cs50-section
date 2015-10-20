@@ -35,3 +35,21 @@ Don't try writing your own hash function... just adapt one off the internet. Som
 * Eliminate function calls when possible because they take up lots of time
 
 # More coming soon!
+
+# Linked Lists
+
+## Create
+
+## Insert
+
+## Delete
+
+## Iterate
+
+# Hashtables
+
+# Create
+
+# Insert
+
+# Lookup
