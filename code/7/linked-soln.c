@@ -105,9 +105,11 @@ int main(int argc, char* argv[])
     }
 
     // test length function
+    printf("TESTING LENGTH\n");
     printf("Length of list is %i (expected to be %i)\n\n", length(), SIZE);
 
     // test prepending
+    printf("TESTING PREPEND\n");
     int new = 50;
     printf("Prepending %i to the list...\n", new);
     printf("Before:\n");
@@ -115,8 +117,10 @@ int main(int argc, char* argv[])
     prepend(new);
     printf("After:\n");
     print_list();
+    printf("\n");
 
     // test search
+    printf("TESTING CONTAINS\n");
     int in_list = new;
     int not_in_list = 1776;
     if (contains(in_list))
@@ -136,6 +140,7 @@ int main(int argc, char* argv[])
     {
         printf("%i not found in list, as expected! :)\n", not_in_list);
     }
+    printf("\n");
 
     return 0;
 }
