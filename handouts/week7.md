@@ -40,11 +40,99 @@ Don't try writing your own hash function... just adapt one off the internet. Som
 
 ## Create
 
+Define a **node struct** to represent each item in the linked list:
+
+```c
+    typedef struct node
+    {
+        // the value to store in this node
+        int n;
+
+        // the link to the next node in the list
+        struct node* next;
+    }
+    node;
+```
+
+Then, to **create the first element** in the linked list:
+
+```c
+    node* head = malloc(sizeof(node));
+
+    // error checking: quit if malloc fails
+    if (head == NULL)
+    {
+        exit(1);
+    }
+
+    // initialize fields in linked list
+    head->n = 50;
+    head->next = NULL;
+```
+
 ## Iterate (length)
+
+Here's a good formula for **iterating through a linked list**:
+
+```c
+    for (node* ptr = head; ptr != NULL; ptr = ptr->next)
+    {
+        // do something
+    }
+```
+
+**Challenge**
+
+```c
+    /*
+     * Returns the length of the linked list that starts at `head`.
+     */
+    int length()
+    {
+        // **YOUR CODE HERE**
+
+
+
+
+
+
+
+
+
+    }
+```
 
 ## Insert
 
-## Search
+**Challenge**
+
+```c
+    /**
+     * Adds an element containing `i` to the front of the linked list that
+     * starts at `head`.
+     */
+    void prepend(int i)
+    {
+        // **YOUR CODE HERE**
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+```
+
+## Search (contains)
+
+**Challenge**
 
 # Hashtables
 
