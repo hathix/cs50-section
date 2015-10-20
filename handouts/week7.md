@@ -34,8 +34,6 @@ Don't try writing your own hash function... just adapt one off the internet. Som
 * Avoid using `strlen` when possible because it's slow; if you're using a loop try to just compare each character to `\0`
 * Eliminate function calls when possible because they take up lots of time
 
-# More coming soon!
-
 # Linked Lists
 
 Linked lists are a data structure that let you keep as many elements as you want in a list. Each element (or *node*) just points to the next node.
@@ -164,7 +162,7 @@ bool contains(int needle)
 
 # Hashtables
 
-Once you know linked lists, hashtables are actually pretty easy! You sort every element into a bucket and store each bucket as a linked list.
+Hashtables are just organized collections of linked lists, so once you understand linked lists, hashtables are actually pretty easy. You just assign every node to a linked list (a "bucket") and do the usual iterate/insert/search operations on the linked list.
 
 ## Create
 
@@ -200,10 +198,15 @@ To figure out what bucket a string belongs in, run it through a **hash function*
 
 There are a ton of good pre-made hash functions; don't try to make your own. Check out a few I've compiled at <https://github.com/hathix/cs50-section/blob/master/code/7/sample-hash-functions>.
 
+```c
+char* word = "chumbucket";
+int bucket_index = hash_function(word);
+```
+
 ## Insert
 
-Inserting into a hashtable is easy: just figure out what bucket the node belongs in and prepend the node to that linked list.
+Inserting into a hashtable is easy: figure out what bucket the node belongs in (use the hash function) and `prepend` the node to that linked list.
 
 ## Lookup
 
-Looking up is also easy: figure out what bucket the node belongs in and do a linear search through that linked list's contents.
+Looking up is also easy: figure out what bucket the node belongs in (use the hash function) and `search` through that linked list's contents.
