@@ -38,36 +38,40 @@ Don't try writing your own hash function... just adapt one off the internet. Som
 
 # Linked Lists
 
+Linked lists are a data structure that let you keep as many elements as you want in a list. Each element (or *node*) just points to the next node.
+
+**Solutions to all these challenges at <https://github.com/hathix/cs50-section/blob/master/code/7/linked-soln.c>**
+
 ## Create
 
 Define a **node struct** to represent each item in the linked list:
 
 ```c
-    typedef struct node
-    {
-        // the value to store in this node
-        int n;
+typedef struct node
+{
+    // the value to store in this node
+    int n;
 
-        // the link to the next node in the list
-        struct node* next;
-    }
-    node;
+    // the link to the next node in the list
+    struct node* next;
+}
+node;
 ```
 
 Then, to **create the first element** in the linked list:
 
 ```c
-    node* head = malloc(sizeof(node));
+node* head = malloc(sizeof(node));
 
-    // error checking: quit if malloc fails
-    if (head == NULL)
-    {
-        exit(1);
-    }
+// error checking: quit if malloc fails
+if (head == NULL)
+{
+    exit(1);
+}
 
-    // initialize fields in linked list
-    head->n = 50;
-    head->next = NULL;
+// initialize fields in linked list
+head->n = 50;
+head->next = NULL;
 ```
 
 ## Iterate (length)
@@ -75,21 +79,22 @@ Then, to **create the first element** in the linked list:
 Here's a good formula for **iterating through a linked list**:
 
 ```c
-    for (node* ptr = head; ptr != NULL; ptr = ptr->next)
-    {
-        // do something
-    }
+// `ptr` iterates over every node starting at `head`
+for (node* ptr = head; ptr != NULL; ptr = ptr->next)
+{
+    // do something
+}
 ```
 
 **Challenge**
 
 ```c
-    /*
-     * Returns the length of the linked list that starts at `head`.
-     */
-    int length()
-    {
-        // **YOUR CODE HERE**
+/*
+ * Returns the length of the linked list that starts at `head`.
+ */
+int length()
+{
+    // **YOUR CODE HERE**
 
 
 
@@ -99,7 +104,7 @@ Here's a good formula for **iterating through a linked list**:
 
 
 
-    }
+}
 ```
 
 ## Insert
@@ -107,13 +112,13 @@ Here's a good formula for **iterating through a linked list**:
 **Challenge**
 
 ```c
-    /**
-     * Adds an element containing `i` to the front of the linked list that
-     * starts at `head`.
-     */
-    void prepend(int i)
-    {
-        // **YOUR CODE HERE**
+/**
+ * Adds an element containing `i` to the front of the linked list that
+ * starts at `head`.
+ */
+void prepend(int i)
+{
+    // **YOUR CODE HERE**
 
 
 
@@ -127,17 +132,78 @@ Here's a good formula for **iterating through a linked list**:
 
 
 
-    }
+}
 ```
 
 ## Search (contains)
 
 **Challenge**
 
+```c
+/**\
+ * Returns true if the linked list that starts at `head` contains `needle`,
+ * false otherwise.
+ */
+bool contains(int needle)
+{
+    // **YOUR CODE HERE**
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
+
 # Hashtables
 
-# Create
+Once you know linked lists, hashtables are actually pretty easy! You sort every element into a bucket and store each bucket as a linked list.
 
-# Insert
+## Create
 
-# Lookup
+```c
+
+// the maximum length of a word in our hashtable
+#define WORD_LENGTH 20
+
+// number of buckets in our hash table
+#define NUM_BUCKETS 100
+
+/**
+ * Each node will store an int and a pointer to the next node with the
+ * same hash value (or NULL, if no such node follows).
+ */
+typedef struct node
+{
+    // what's the +1 for here?
+    char word[WORD_LENGTH + 1];
+    struct node* next;
+}
+node;
+
+
+// a hashtable is an array of pointers: each pointer is the head of a linked
+// list (aka bucket), and you have NUM_BUCKETS buckets stored in an array
+node* hashtable[NUM_BUCKETS];
+```
+
+## Hashing
+
+To figure out what bucket a string belongs in, run it through a **hash function**. Hash functions turn strings into integers, where the integer indicates the index of the bucket. A good hash function will minimize "collisions" in a bucket (when ≥1 string falls into the same bucket) by trying to make each string correspond to a unique integer.
+
+There are a ton of good pre-made hash functions; don't try to make your own. Check out a few I've compiled at <https://github.com/hathix/cs50-section/blob/master/code/7/sample-hash-functions>.
+
+## Insert
+
+Inserting into a hashtable is easy: just figure out what bucket the node belongs in and prepend the node to that linked list.
+
+## Lookup
+
+Looking up is also easy: figure out what bucket the node belongs in and do a linear search through that linked list's contents.
