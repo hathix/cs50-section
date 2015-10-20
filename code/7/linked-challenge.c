@@ -34,16 +34,8 @@ void print_list()
  */
 int length()
 {
-    int length = 0;
-
-    // traverse list (this is a good formula for iterating over linked lists)
-    for (node* ptr = head; ptr != NULL; ptr = ptr->next)
-    {
-        // count nodes
-        length++;
-    }
-
-    return length;
+    // **YOUR CODE HERE**
+    return 0;
 }
 
 /**
@@ -52,20 +44,7 @@ int length()
  */
 void prepend(int i)
 {
-    // build new node
-    node* new = malloc(sizeof(node));
-
-    if (new == NULL)
-    {
-        exit(1);
-    }
-
-    // initialize new node
-    new->n = i;
-
-    // add new node to head of list
-    new->next = head;
-    head = new;
+    // **YOUR CODE HERE**
 }
 
 /**
@@ -74,18 +53,7 @@ void prepend(int i)
  */
 bool contains(int needle)
 {
-    // traverse list
-    for (node*  ptr = head; ptr != NULL; ptr = ptr->next)
-    {
-        // check each node
-        if (ptr->n == needle)
-        {
-            // return true if we find value
-            return true;
-        }
-    }
-    // return false if we haven't found value
-    return false;
+    // **YOUR CODE HERE**
 }
 
 int main(int argc, char* argv[])

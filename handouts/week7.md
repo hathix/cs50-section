@@ -40,11 +40,11 @@ Don't try writing your own hash function... just adapt one off the internet. Som
 
 ## Create
 
+## Iterate (length)
+
 ## Insert
 
-## Delete
-
-## Iterate
+## Search
 
 # Hashtables
 
