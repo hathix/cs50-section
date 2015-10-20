@@ -68,6 +68,26 @@ void prepend(int i)
     head = new;
 }
 
+/**
+ * Returns true if the linked list that starts at `head` contains `needle`,
+ * false otherwise.
+ */
+bool contains(int needle)
+{
+    // traverse list
+    for (node*  ptr = head; ptr != NULL; ptr = ptr->next)
+    {
+        // check each node
+        if (ptr->n == needle)
+        {
+            // return true if we find value
+            return true;
+        }
+    }
+    // return false if we haven't found value
+    return false;
+}
+
 int main(int argc, char* argv[])
 {
     // create linked list
@@ -85,7 +105,7 @@ int main(int argc, char* argv[])
     }
 
     // test length function
-    printf("Length of list is %i (expected to be %i)", length(), SIZE);
+    printf("Length of list is %i (expected to be %i)\n\n", length(), SIZE);
 
     // test prepending
     int new = 50;
@@ -96,6 +116,26 @@ int main(int argc, char* argv[])
     printf("After:\n");
     print_list();
 
+    // test search
+    int in_list = new;
+    int not_in_list = 1776;
+    if (contains(in_list))
+    {
+        printf("%i found in list, as expected! :)\n", in_list)
+    }
+    else
+    {
+        printf("%i unexpectedly not found in list :(\n", in_list);
+    }
+
+    if (contains(not_in_list))
+    {
+        printf("%i unexpectedly found in list! :(\n", not_in_list)
+    }
+    else
+    {
+        printf("%i not found in list, as expected! :)\n", not_in_list);
+    }
 
     return 0;
 }
