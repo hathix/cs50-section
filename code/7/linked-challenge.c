@@ -1,3 +1,13 @@
+/**
+ * Linked List Challenge
+ * Neel Mehta's CS50 Section <https://github.com/hathix/cs50-section>
+ *
+ * Challenge problems contained here:
+ * - length
+ * - prepend
+ * - contains
+ */
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
