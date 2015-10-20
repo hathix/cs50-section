@@ -121,7 +121,7 @@ int main(int argc, char* argv[])
     int not_in_list = 1776;
     if (contains(in_list))
     {
-        printf("%i found in list, as expected! :)\n", in_list)
+        printf("%i found in list, as expected! :)\n", in_list);
     }
     else
     {
@@ -130,7 +130,7 @@ int main(int argc, char* argv[])
 
     if (contains(not_in_list))
     {
-        printf("%i unexpectedly found in list! :(\n", not_in_list)
+        printf("%i unexpectedly found in list! :(\n", not_in_list);
     }
     else
     {
