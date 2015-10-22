@@ -1,5 +1,7 @@
 /*
- * The one hash function that'll actually, you know, work!
+ * Most of the hash functions you'll find online will
+ * be wrong, or ugly, or both! Here's a hash function that'll
+ * just, you know, work!
  * Feel free to use this function, just provide attribution
  * in a comment!
  */
