@@ -2,10 +2,6 @@
  * The one hash function that'll actually, you know, work!
  * Feel free to use this function, just provide attribution
  * in a comment!
- *
- * Adapted by Neel Mehta from
- * http://stackoverflow.com/questions/2571683/djb2-hash-function
- *
  */
 
 /**
