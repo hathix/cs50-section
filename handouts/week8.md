@@ -84,7 +84,10 @@ Write HTML to generate a page like this:
 ![Simple HTML webpage](img/challenge-html.png)
 
 # PHP
+You can try some PHP code at [http://phpfiddle.org/](http://phpfiddle.org/)!
+
 ## Of `GET`s and `POST`s
+The "superglobals" `$_GET` and `$_POST` contain data from the URL string and from forms, respectively.
 
 ```php
 <?php
@@ -104,7 +107,8 @@ Write HTML to generate a page like this:
 ?>
 ```
 
-## Printing out HTML
+## HTML templating
+PHP has weird syntax for conditional templating.
 
 ```php
 <div>
@@ -116,6 +120,41 @@ Write HTML to generate a page like this:
 </div>
 ```
 
-```php
+You can use `<?= $variable; ?>` to print out variables.
 
+```php
+<?php
+    $username = "Neel";
+    $teams = ["Phillies", "Red Sox", "Orioles"];
+?>
+
+<p>Some of <?= $username ?>'s favorite teams:</p>
+<ul>
+    <?php foreach ($teams as $team): ?>
+        <li>
+            Go <?= $team ?>!
+        </li>
+    <?php endforeach; ?>
+</ul>
 ```
+
+## Challenge
+You already have this PHP code:
+
+```php
+<?php
+    $drinks = [
+        ["name" => "Coke", "price" => 3],
+        ["name" => "Sprite", "price" => 4],
+        ["name" => "Water", "price" => 11]
+    ];
+?>
+```
+
+Write more PHP/HTML code that uses `$drinks` and `foreach` to generate a table like this:
+
+Name   | Price
+------ | -----
+Coke   | 3
+Sprite | 4
+Water  | 11
