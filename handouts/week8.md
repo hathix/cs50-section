@@ -1,4 +1,4 @@
-# CS50 Section. Week 7. 10/20/15.
+# CS50 Section. Week 8. 10/27/15.
 _Tuesdays 7:00-8:30pm, Science Center 309A. [https://github.com/hathix/cs50-section](https://github.com/hathix/cs50-section)._
 
 Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
