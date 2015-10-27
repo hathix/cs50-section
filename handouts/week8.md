@@ -96,7 +96,7 @@ Associative arrays are simple hash tables, or arrays with strings as keys and no
     $name = $movie['name'] . "!!!";
     printf($name);
 
-    // prints "6" (quotes)
+    // prints "6" (without quotes)
     $movie['rating']++;
     printf($movie['rating']);
 ?>
