@@ -9,14 +9,14 @@
 ?>
 
 <table>
-	<tr>
-		<th>Name</th>
-		<th>Price</th>
-	</tr>
-	<?php foreach ($drinks as $drink): ?>
-		<tr>
-			<td><?= $drink["name"] ?></td>
-			<td><?= $drink["price"] ?></td>
-		</tr>
-	<?php endforeach; ?>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <?php foreach ($drinks as $drink): ?>
+        <tr>
+            <td><?= $drink["name"] ?></td>
+            <td><?= $drink["price"] ?></td>
+        </tr>
+    <?php endforeach; ?>
 </table>
