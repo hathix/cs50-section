@@ -82,3 +82,40 @@ Try out your own HTML or follow along at [http://is.gd/cs50_html](http://is.gd/c
 Write HTML to generate a page like this:
 
 ![Simple HTML webpage](img/challenge-html.png)
+
+# PHP
+## Of `GET`s and `POST`s
+
+```php
+<?php
+    // if user reached page via GET (as by clicking a link or via redirect)
+    if ($_SERVER["REQUEST_METHOD"] == "GET")
+    {
+        $query = $_GET["query"];
+        printf("You searched for $query.");
+    }
+    // else if user reached page via POST (as by submitting a form via POST)
+    else if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $username = $_POST["username"];
+        printf("Yo, $username!");
+    }
+
+?>
+```
+
+## Printing out HTML
+
+```php
+<div>
+    <?php if (is_logged_in()): ?>
+        <p>Welcome to Facebook!</p>
+    <?php else: ?>
+        <a href="/login.php">Log in, dude!</a>
+    <?php endif; ?>
+</div>
+```
+
+```php
+
+```
