@@ -83,8 +83,10 @@ Write HTML to generate a page like this:
 
 ![Simple HTML webpage](img/challenge-html.png)
 
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/8/html-soln.html](https://github.com/hathix/cs50-section/blob/master/code/8/html-soln.html)
+
 # PHP
-You can try some PHP code at [http://phpfiddle.org/](http://phpfiddle.org/)!
+You can test out PHP code at [http://phpfiddle.org/](http://phpfiddle.org/)!
 
 ## Associative arrays
 Associative arrays are simple hash tables, or arrays with strings as keys and not integers.
@@ -92,8 +94,12 @@ Associative arrays are simple hash tables, or arrays with strings as keys and no
 ```php
 <?php
     $movie = ["name" => "Up", "rating" => 5, "comment" => "Needs more squirrels"];
-    $name = $movie['name'];
+
+    // prints "Up!!!" (without quotes)
+    $name = $movie['name'] . "!!!";
     printf($name);
+
+    // prints "6" (quotes)
     $movie['rating']++;
     printf($movie['rating']);
 ?>
@@ -171,3 +177,5 @@ Name   | Price
 Coke   | 3
 Sprite | 4
 Water  | 11
+
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/8/php-soln.php](https://github.com/hathix/cs50-section/blob/master/code/8/php-soln.php)
