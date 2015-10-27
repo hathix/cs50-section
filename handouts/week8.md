@@ -86,6 +86,19 @@ Write HTML to generate a page like this:
 # PHP
 You can try some PHP code at [http://phpfiddle.org/](http://phpfiddle.org/)!
 
+## Associative arrays
+Associative arrays are simple hash tables, or arrays with strings as keys and not integers.
+
+```php
+<?php
+    $movie = ["name" => "Up", "rating" => 5, "comment" => "Needs more squirrels"];
+    $name = $movie['name'];
+    printf($name);
+    $movie['rating']++;
+    printf($movie['rating']);
+?>
+```
+
 ## Of `GET`s and `POST`s
 The "superglobals" `$_GET` and `$_POST` contain data from the URL string and from forms, respectively.
 
