@@ -48,11 +48,11 @@ Try out your own HTML or follow along at [http://is.gd/cs50_html](http://is.gd/c
 <button>Search</button>
 
 <!-- ul and multi-nested elements -->
-<p>Some cities:</p>
+<p>Some houses:</p>
 <ul>
-  <li>Boston</li>
-  <li>Cambridge</li>
-  <li>Somerville</li>
+  <li>Pfoho</li>
+  <li>Currier</li>
+  <li>Cabot</li>
 </ul>
 
 <!-- links -->
@@ -61,19 +61,16 @@ Try out your own HTML or follow along at [http://is.gd/cs50_html](http://is.gd/c
 <!-- tables -->
 <table>
     <tr>
-        <th>House</th>
-        <th>Rating (of 5)</th>
-        <th>Comments</th>
+        <th>City</th>
+        <th>Weather</th>
     </tr>
     <tr>
-        <th>Pforzheimer</th>
-        <th>5.0</th>
-        <th>That spelling is pfantastic.</th>
+        <th>Boston</th>
+        <th>67F and windy</th>
     </tr>
     <tr>
-        <th>Adams</th>
-        <th>3.4</th>
-        <th>Walls painted <em>gold</em>? That's a bit much.</th>
+        <th>Philadelphia</th>
+        <th>71F and <em>always sunny</em></th>
     </tr>
 </table>
 ```
@@ -105,7 +102,7 @@ Associative arrays are simple hash tables, or arrays with strings as keys and no
 ?>
 ```
 
-## Of `GET`s and `POST`s
+## Of GETs and POSTs
 The "superglobals" `$_GET` and `$_POST` contain data from the URL string and from forms, respectively.
 
 ```php
