@@ -26,3 +26,59 @@ Due by email to me on Mon. 11/2!
 - Find a team of 2-3! Ask friends, fellow sectioneers, people in your clubs, etc.
 
 # HTML
+Try out your own HTML or follow along at [http://is.gd/cs50_html](http://is.gd/cs50_html)!
+
+## Sample code
+
+```html
+<!-- basic elements -->
+<h1>This is CS50.</h1>
+
+<p>But, unfortunately, this is just a run-of-the-mill paragraph.</p>
+
+<button>Self destruct</button>
+
+<!-- nested elements -->
+<p>
+  Feeling lucky? If so <button>click me</button>.  
+</p>
+
+<!-- attributes -->
+<input type="text" placeholder="Type something...">
+<button>Search</button>
+
+<!-- ul and multi-nested elements -->
+<p>Some cities:</p>
+<ul>
+  <li>Boston</li>
+  <li>Cambridge</li>
+  <li>Somerville</li>
+</ul>
+
+<!-- links -->
+<p><a href="http://yale.edu">Safety school</a></p>
+
+<!-- tables -->
+<table>
+    <tr>
+        <th>House</th>
+        <th>Rating (of 5)</th>
+        <th>Comments</th>
+    </tr>
+    <tr>
+        <th>Pforzheimer</th>
+        <th>5.0</th>
+        <th>That spelling is pfantastic.</th>
+    </tr>
+    <tr>
+        <th>Adams</th>
+        <th>3.4</th>
+        <th>Walls painted <em>gold</em>? That's a bit much.</th>
+    </tr>
+</table>
+```
+
+## Form challenge
+Write HTML to generate a page like this:
+
+![Simple HTML webpage](img/challenge-html.png)
