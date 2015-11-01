@@ -137,9 +137,10 @@ Let's create a page that prints out all of a user's snaps.
     </ul>
 ```
 
-# More PHP
-- MVC
-- templating
+# MVC and templating with PHP
+Watch this video I made that explains this! This was my part of my CS50 TF application :)
+
+**TODO add YouTube URL**
 
 # JavaScript
 ..
@@ -172,8 +173,7 @@ write(bigger);
 ```
 
 # jQuery
-## Example
-**HTML**
+Here's HTML for a simple counter app:
 
 ```html
 <div class="row">
@@ -186,9 +186,6 @@ write(bigger);
     <button class="btn btn-success btn-lg" id="add">
       +
     </button>
-    <button class="btn btn-danger btn-lg" id="subtract">
-      -
-    </button>
     <button class="btn btn-info btn-lg" id="clear">
       0
     </button>
@@ -196,25 +193,23 @@ write(bigger);
 </div>
 ```
 
-**JavaScript (first run)**
+Here's some JavaScript that makes it interactive using jQuery:
 
 ```js
-let count = 0;
+var count = 0;
 
 // event handlers, $, html
-$("#add").on("click", () => {
+$("#add").on("click", function() {
   count = count + 1;
   $("#counter").html(count);
 });
+```
 
-// subtract: do this yourself!
-$("#subtract").on("click", () => {
-  count = count - 1;
-  $("#counter").html(count);
-});
+## Challenge
 
+```js
 // clear; do this yourself!
-$("#clear").on("click", () => {
+$("#clear").on("click", function() {
   count = 0;
   $("#counter").html(count);
 });
@@ -230,43 +225,17 @@ let update = (newCount) => {
   $("#counter").html(newCount);
 };
 
-$("#add").on("click", () => {
+$("#add").on("click", function() {
   update(count + 1);
 });
 
 // subtract: do this yourself!
-$("#subtract").on("click", () => {
+$("#subtract").on("click", function() {
   update(count - 1);
 });
 
 // clear: do this yourself!
-$("#clear").on("click", () => {
-  update(0);
-});
-```
-
-**New JavaScript (additional error checking)**
-
-```js
-let count = 0;
-
-let update = (newCount) => {
-  // ensure that the count never goes below 0
-  if (newCount >= 0) {
-    count = newCount;
-    $("#counter").html(newCount);
-  }
-};
-
-$("#add").on("click", () => {
-  update(count + 1);
-});
-
-$("#subtract").on("click", () => {
-  update(count - 1);
-});
-
-$("#clear").on("click", () => {
+$("#clear").on("click", function() {
   update(0);
 });
 ```
