@@ -140,7 +140,7 @@ Let's create a page that prints out all of a user's snaps.
 # MVC and templating with PHP
 Watch this video I made that explains this! This was my part of my CS50 TF application :)
 
-**TODO add YouTube URL**
+[https://www.youtube.com/watch?v=vqcQD-HmLl8](https://www.youtube.com/watch?v=vqcQD-HmLl8)
 
 # JavaScript
 ..
