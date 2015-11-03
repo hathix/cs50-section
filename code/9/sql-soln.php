@@ -3,7 +3,7 @@
     $username = $_POST["username"];
 
     // step 1. get the user's id given their username
-    $result = query("SELECT id FROM users WHERE username = ?", $username);
+    $result = CS50::query("SELECT id FROM users WHERE username = ?", $username);
     if ($result === false)
     {
         apologize("Error accessing user data!");
@@ -13,7 +13,7 @@
     $user_id = $result[0]["id"];
 
     // step 2. get all zaps sent to user
-    $zaps = query("SELECT * FROM zaps WHERE sent_to = ?", $user_id);
+    $zaps = CS50::query("SELECT * FROM zaps WHERE sent_to = ?", $user_id);
     if ($zaps === false)
     {
         apologize("Error getting zaps!");

@@ -33,6 +33,8 @@ seen        |      |              |
 
 Where `sent_from` and `sent_to` are `id`s from the `users` table.
 
+Solution:
+
 ## Getting data with SELECT
 Let's print summary information about a user:
 
@@ -41,10 +43,10 @@ Let's print summary information about a user:
     // assume this works
     $user_id = $_POST["id"];
 
-    // query() is a CS50-specific function
+    // CS50::query() is a CS50-specific function
     // you could also do `SELECT username, score` for more granular access;
     // `SELECT *` just picks all columns
-    $result = query('SELECT * FROM users WHERE id = ?', $user_id);
+    $result = CS50::query('SELECT * FROM users WHERE id = ?', $user_id);
     if ($result === false)
     {
         // apologize() is a CS50-specific function
@@ -70,7 +72,7 @@ Let's insert a new Zap.
 
     // note you don't have to specify the id because that's auto-generated
     // for you (because of auto increment)
-    $result = query("INSERT INTO zaps (sent_from, sent_to, length, seen) VALUES(?, ?, ?, ?)", $from_id, $to_id, $zap_length, false);
+    $result = CS50::query("INSERT INTO zaps (sent_from, sent_to, length, seen) VALUES(?, ?, ?, ?)", $from_id, $to_id, $zap_length, false);
     if ($result === false)
     {
         apologize("Error sending Zap!");        
@@ -87,7 +89,7 @@ Let's increase a user's score by 5 points.
     $user_id = $_POST["id"];
     $points = 5;
 
-    $result = query("UPDATE users SET score = score + ? WHERE id = ?", $points, $user_id);
+    $result = CS50::query("UPDATE users SET score = score + ? WHERE id = ?", $points, $user_id);
     if ($result === false)
     {
         apologize("Error updating score!");    
