@@ -92,7 +92,7 @@ Let's print summary information about a user:
 ?>
 ```
 
-Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md](https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md)
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md#select](https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md#select)
 
 ### Adding data with INSERT
 Let's insert a new Zap.
@@ -115,7 +115,7 @@ Let's insert a new Zap.
 ?>
 ```
 
-Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md](https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md)
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md#insert](https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md#insert)
 
 ### Updating with UPDATE
 Let's increase a user's score by 5 points.
@@ -137,7 +137,7 @@ Let's increase a user's score by 5 points.
 ?>
 ```
 
-Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md](https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md)
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md#update](https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md#update)
 
 ### Mega challenge!
 Let's create a page that prints out all of a user's snaps.
