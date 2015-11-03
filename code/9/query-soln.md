@@ -9,7 +9,7 @@ SELECT * FROM users WHERE id = ?
 # INSERT
 
 ```sql
-INSERT INTO zaps (sent_from, sent_to, length, seen) VALUES(?, ?, ?, ?)
+INSERT INTO zaps (sent_from, sent_to, length, seen) VALUES (?, ?, ?, ?)
 ```
 
 # UPDATE

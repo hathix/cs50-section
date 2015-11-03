@@ -6,6 +6,37 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
 # SQL
+## Queries
+Let's say we have a table `movies` with the following schema:
+
+column name | type        | primary key? | auto increment?
+----------- | ----------- | ------------ | ---------------
+id          | INT         | yes          | yes
+name        | VARCHAR(25) |              |
+year        | INT         |              |
+stars       | INT         |              |
+
+```sql
+# select: get rows
+# `SELECT *` gets all columns
+SELECT * FROM movies WHERE id = 5
+# you can also get specific columns
+SELECT name, stars FROM movies WHERE year = 2015
+
+# insert: add rows
+# note you don't have to specify the id because that's auto-generated
+# for you (because of auto increment)
+INSERT INTO movies (name, released, stars) VALUES ("Finding Nemo", 2003, 5)
+
+# update: change rows
+UPDATE movies SET stars = 3 WHERE id = 9
+# you can even change fields' values depending on their current values
+UPDATE movies SET stars = stars + 1 WHERE id = 3
+
+# delete: remove rows
+DELETE FROM movies WHERE stars = 0
+```
+
 ## Challenge: Zapchat
 Let's make an app called Zapchat that lets you send short, self-destructing photo messages to your friends! It's a radical new idea and we're gonna make millions.
 
@@ -71,9 +102,6 @@ Let's insert a new Zap.
     $from_id = $_POST["from_id"];
     $to_id = $_POST["to_id"];
     $zap_length = $_POST["length"];
-
-    // note you don't have to specify the id because that's auto-generated
-    // for you (because of auto increment)
 
     // TODO: write your query here
     $my_query = "";
