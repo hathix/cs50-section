@@ -54,6 +54,11 @@ You use `CS50::query` like so:
     {
         // some error occurred with your query or the database!
     }
+
+    // `$result` is an array of matched rows
+    $first_row = $result[0];
+    // each element of `result` is an associative array representing a row
+    $name = $first_row["name"];
 ?>
 ```
 
