@@ -44,10 +44,11 @@ UPDATE movies SET stars = stars + 1 WHERE id = 3
 DELETE FROM movies WHERE stars = 0
 ```
 
-Recall that you use `CS50::query` as such:
+You use `CS50::query` like so:
 
 ```php
 <?php
+    // use the `?` kinda like you'd use the `%s` or `%i` from C's `printf`
     $result = CS50::query("SELECT * FROM movies WHERE year = ? AND stars = ?", $movie_year, $movie_stars);
     if ($result === false)
     {
