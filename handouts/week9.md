@@ -16,12 +16,19 @@ name        | VARCHAR(25) | no           | no
 year        | INT         | no           | no
 stars       | INT         | no           | no
 
+Here are some example SQL queries we can run with `CS50::query`.
+
 ```sql
 # select: get rows
 # `SELECT *` gets all columns
 SELECT * FROM movies WHERE id = 5
 # you can also get specific columns
 SELECT name, stars FROM movies WHERE year = 2015
+# you can make more interesting WHERE clauses
+SELECT * FROM movies WHERE year = 2008 AND stars = 4
+# or you can omit WHERE entirely
+SELECT name FROM movies
+
 
 # insert: add rows
 # note you don't have to specify the id because that's auto-generated
@@ -35,6 +42,18 @@ UPDATE movies SET stars = stars + 1 WHERE id = 3
 
 # delete: remove rows
 DELETE FROM movies WHERE stars = 0
+```
+
+Recall that you use `CS50::query` as such:
+
+```php
+<?php
+    $result = CS50::query("SELECT * FROM movies WHERE year = ? AND stars = ?", $movie_year, $movie_stars);
+    if ($result === false)
+    {
+        // some error occurred with your query or the database!
+    }
+?>
 ```
 
 ## Challenge: Zapchat
@@ -59,7 +78,7 @@ sent_to     |      |              |
 length      |      |              |
 seen        |      |              |
 
-Where `sent_from` and `sent_to` are `id`s from the `users` table.
+`sent_from` and `sent_to` are `id`s from the `users` table.
 
 Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/tables-soln.md](https://github.com/hathix/cs50-section/blob/master/code/9/tables-soln.md)
 
