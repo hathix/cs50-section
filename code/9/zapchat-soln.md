@@ -1,3 +1,5 @@
+**Zapchat challenge: [https://github.com/hathix/cs50-section/blob/master/handouts/week9.md](https://github.com/hathix/cs50-section/blob/master/handouts/week9.md)**
+
 # SELECT
 
 ```sql
