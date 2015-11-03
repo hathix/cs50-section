@@ -12,9 +12,9 @@ Let's say we have a table `movies` with the following schema:
 column name | type        | primary key? | auto increment?
 ----------- | ----------- | ------------ | ---------------
 id          | INT         | yes          | yes
-name        | VARCHAR(25) |              |
-year        | INT         |              |
-stars       | INT         |              |
+name        | VARCHAR(25) | no           | no
+year        | INT         | no           | no
+stars       | INT         | no           | no
 
 ```sql
 # select: get rows
