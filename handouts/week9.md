@@ -6,32 +6,30 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
 # SQL
-- getting data with queries
-- INSERT
-- update
 - `$_SESSION`
 
 Let's make Snapchat db! snap score, add user
 
 Let's make an app called ZapChat that lets you send short, self-destructing photo messages to your friends! It's a radical new idea and we're gonna make millions.
 
-Let's say we have a table `users` with the following schema:
-
-column name | type        | primary key? | auto increment?
------------ | ----------- | ------------ | ---------------
-id          | INT         | yes          | yes
-username    | VARCHAR(15) |              |
-score       | INT         |              |
-
-And a table `zaps`, representing the messages, with the following schema:
+## Designing the tables
+We first need to design a table `users`. Help fill in the rest of the fields:
 
 column name | type | primary key? | auto increment?
 ----------- | ---- | ------------ | ---------------
-id          | INT  | yes          | yes
-sent_from   | INT  |              |
-sent_to     | INT  |              |
-length      | INT  |              |
-seen        | BOOL |              |
+id          |      |              |
+username    |      |              |
+score       |      |              |
+
+And for a table `zaps`, representing the messages:
+
+column name | type | primary key? | auto increment?
+----------- | ---- | ------------ | ---------------
+id          |      |              |
+sent_from   |      |              |
+sent_to     |      |              |
+length      |      |              |
+seen        |      |              |
 
 Where `sent_from` and `sent_to` are `id`s from the `users` table.
 
