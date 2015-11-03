@@ -33,7 +33,7 @@ seen        |      |              |
 
 Where `sent_from` and `sent_to` are `id`s from the `users` table.
 
-Solution:
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/tables-soln.md](https://github.com/hathix/cs50-section/blob/master/code/9/tables-soln.md)
 
 ## Getting data with SELECT
 Let's print summary information about a user:
@@ -136,6 +136,8 @@ Let's create a page that prints out all of a user's snaps.
 
     </ul>
 ```
+
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/sql-soln.php](https://github.com/hathix/cs50-section/blob/master/code/9/sql-soln.php)
 
 # MVC and templating with PHP
 Watch this video I made that explains this! This was my part of my CS50 TF application :)
