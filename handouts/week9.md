@@ -6,13 +6,10 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
 # SQL
-- `$_SESSION`
+## Zapchat
+Let's make an app called Zapchat that lets you send short, self-destructing photo messages to your friends! It's a radical new idea and we're gonna make millions.
 
-Let's make Snapchat db! snap score, add user
-
-Let's make an app called ZapChat that lets you send short, self-destructing photo messages to your friends! It's a radical new idea and we're gonna make millions.
-
-## Designing the tables
+### Designing the tables
 We first need to design a table `users`. Help fill in the rest of the fields:
 
 column name | type | primary key? | auto increment?
@@ -35,7 +32,7 @@ Where `sent_from` and `sent_to` are `id`s from the `users` table.
 
 Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/tables-soln.md](https://github.com/hathix/cs50-section/blob/master/code/9/tables-soln.md)
 
-## Getting data with SELECT
+### Getting data with SELECT
 Let's print summary information about a user:
 
 ```php
@@ -44,9 +41,7 @@ Let's print summary information about a user:
     $user_id = $_POST["id"];
 
     // CS50::query() is a CS50-specific function
-    // you could also do `SELECT username, score` for more granular access;
-    // `SELECT *` just picks all columns
-    $result = CS50::query('SELECT * FROM users WHERE id = ?', $user_id);
+    $result = CS50::query(/* TODO */, $user_id);
     if ($result === false)
     {
         // apologize() is a CS50-specific function
@@ -61,7 +56,7 @@ Let's print summary information about a user:
 ?>
 ```
 
-## Adding data with INSERT
+### Adding data with INSERT
 Let's insert a new Zap.
 
 ```php
@@ -81,7 +76,7 @@ Let's insert a new Zap.
 ?>
 ```
 
-## Updating with UPDATE
+### Updating with UPDATE
 Let's increase a user's score by 5 points.
 
 ```php
@@ -98,7 +93,7 @@ Let's increase a user's score by 5 points.
 ?>
 ```
 
-## Challenge!
+### Big challenge!
 Let's create a page that prints out all of a user's snaps.
 
 ```php
