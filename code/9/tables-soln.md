@@ -8,10 +8,10 @@ score       | INT         |              |
 
 # zaps
 
-column name | type | primary key? | auto increment?
------------ | ---- | ------------ | ---------------
-id          | INT  | yes          | yes
-sent_from   | INT  |              |
-sent_to     | INT  |              |
-length      | INT  |              |
-seen        | BOOL |              |
+column name | type    | primary key? | auto increment?
+----------- | ------- | ------------ | ---------------
+id          | INT     | yes          | yes
+sent_from   | INT     |              |
+sent_to     | INT     |              |
+length      | INT     |              |
+seen        | BOOLEAN |              |
