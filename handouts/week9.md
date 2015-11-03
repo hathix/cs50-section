@@ -111,7 +111,7 @@ Let's increase a user's score by 5 points.
 
 Solution: [https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md](https://github.com/hathix/cs50-section/blob/master/code/9/query-soln.md)
 
-### Big challenge!
+### Mega challenge!
 Let's create a page that prints out all of a user's snaps.
 
 ```php
