@@ -70,19 +70,19 @@ We first need to design a table `users`. Help fill in the rest of the fields:
 
 column name | type | primary key? | auto increment?
 ----------- | ---- | ------------ | ---------------
-id          |      |              |
-username    |      |              |
-score       |      |              |
+id          |
+username    |   
+score       |   
 
 And for a table `zaps`, representing the messages:
 
 column name | type | primary key? | auto increment?
 ----------- | ---- | ------------ | ---------------
-id          |      |              |
-sent_from   |      |              |
-sent_to     |      |              |
-length      |      |              |
-seen        |      |              |
+id          |      
+sent_from   |      
+sent_to     |      
+length      |      
+seen        |      
 
 `sent_from` and `sent_to` are `id`s from the `users` table.
 
