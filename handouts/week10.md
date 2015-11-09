@@ -5,6 +5,10 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
+## Final project
+### Useful links
+- CS50 APIs (course information, building info, HUDS menus): [https://docs.cs50.net/docs](https://docs.cs50.net/docs)
+
 ## JavaScript
 ### TODOS
 - run this all on codepen
