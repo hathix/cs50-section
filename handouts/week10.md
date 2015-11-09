@@ -5,14 +5,6 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
-## For the pset
-
-```php
-$my_object = ["name" => "Harvard", "year" => 1636];
-header("Content-type: application/json");
-print(json_encode($my_object, JSON_PRETTY_PRINT));
-```
-
 ## JavaScript
 ..
 
