@@ -1,3 +1,11 @@
+# For the pset
+
+```php
+$my_object = ["name" => "Harvard", "year" => 1636];
+header("Content-type: application/json");
+print(json_encode($my_object, JSON_PRETTY_PRINT));
+```
+
 # JavaScript
 ..
 
