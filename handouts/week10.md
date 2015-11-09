@@ -1,4 +1,11 @@
-# For the pset
+# CS50 Section. Week 10. 11/10/15.
+_Tuesdays 7:00-8:30pm, Science Center 309A. [https://github.com/hathix/cs50-section](https://github.com/hathix/cs50-section)._
+
+Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
+
+Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
+
+## For the pset
 
 ```php
 $my_object = ["name" => "Harvard", "year" => 1636];
@@ -6,7 +13,7 @@ header("Content-type: application/json");
 print(json_encode($my_object, JSON_PRETTY_PRINT));
 ```
 
-# JavaScript
+## JavaScript
 ..
 
 **JavaScript**
