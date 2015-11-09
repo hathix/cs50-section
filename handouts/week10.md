@@ -13,7 +13,8 @@ Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handou
 ## TODOS
 - run this all on codepen
 - basic JS (objects)
-- callbacks
+- counter button example
+- Working with arrays (`.push`)
 
 Stuff you gotta know
 
@@ -66,9 +67,13 @@ var arguments = {
 $.getJSON("api-endpoint.php", arguments)
 .done(function(data, textStatus, jqXHR) {
     // success!
+    // data is a JavaScript object; ignore the other 2 variables
+    console.log(data);
 })
 .fail(function(jqXHR, textStatus, errorThrown) {
     // failure!
+    // errorThrown provides error info; ignore the other 2 variables
+    console.log(errorThrown.toString());
 });
 ```
 
