@@ -5,20 +5,59 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
-## Final project
-### Useful links
+# Final project
+## Useful links
 - CS50 APIs (course information, building info, HUDS menus): [https://docs.cs50.net/docs](https://docs.cs50.net/docs)
 
-## JavaScript
-### TODOS
+# JavaScript
+## TODOS
 - run this all on codepen
 - basic JS (objects)
 - callbacks
 
 Stuff you gotta know
 
-### Callbacks
-### Ajax
+## Functions
+
+```js
+// "function declaration" syntax
+function add(a, b) {
+    return a + b;
+}
+
+// "function literal" syntax
+var subtract = function(a, b) {
+    return a - b;
+};
+```
+
+**Functions are variables!**
+
+```js
+function call(myFunction, x, y) {
+    return myFunction(x, y);
+}
+
+// prints 7
+console.log(call(subtract, 9, 2));
+
+// prints 12
+console.log(call(function(a, b){
+    return a * b;
+}, 3, 4));
+```
+
+## Callbacks
+Functions that you pass to other functions are called _callbacks_.
+
+```js
+function callback(){
+    console.log("Hi!");
+};
+waitForABitThenRun(callback);
+```
+
+## Ajax
 
 ```js
 var arguments = {
@@ -33,7 +72,7 @@ $.getJSON("api-endpoint.php", arguments)
 });
 ```
 
-### Templating
+## Templating
 
 ```js
 var templateFunction = _.template("<a href='<%- url %>' class='btn btn-<%- btnClass %>'><%- text %></a>");
