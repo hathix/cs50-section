@@ -6,7 +6,39 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
 ## JavaScript
-..
+### TODOS
+- run this all on codepen
+- basic JS (objects)
+- callbacks
+
+Stuff you gotta know
+
+### Callbacks
+### Ajax
+
+```js
+var arguments = {
+    key: "value"
+};
+$.getJSON("api-endpoint.php", arguments)
+.done(function(data, textStatus, jqXHR) {
+    // success!
+})
+.fail(function(jqXHR, textStatus, errorThrown) {
+    // failure!
+});
+```
+
+### Templating
+
+```js
+var templateFunction = _.template("<a href='<%- url %>' class='btn btn-<%- btnClass %>'><%- text %></a>");
+var htmlString = templateFunction({
+    url: "http://yale.edu",
+    btnClass: "danger",
+    text: "Safety school"
+});
+```
 
 **JavaScript**
 
