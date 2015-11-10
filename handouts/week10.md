@@ -12,46 +12,9 @@ Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handou
 # JavaScript
 ## TODOS
 - run this all on codepen
-- basic JS (objects)
 - counter button example
-- Working with arrays (`.push`)
 
 Stuff you gotta know
-
-## Arrays
-
-```js
-// mixed types in arrays
-var numbers = [1, 2, 3];
-var stuff = ["Cherry", 43.5, ["a", "b", "c"]];
-
-// prints 1, 2, 3
-for (var i = 0; i < numbers.length; i++) {
-    console.log(numbers[i]);
-}
-
-// prints [1, 2, 3, 4]
-numbers.push(4);
-console.log(numbers);
-```
-
-## Objects
-
-```js
-
-var movie = {
-    title: "Moneyball",
-    year: 2011,
-    tags: ["baseball", "oakland"]
-};
-
-// prints 2011
-console.log(movie.year);
-
-// prints "Harry Potter"
-movie.title = "Harry Potter";
-console.log(movie.title);
-```
 
 ## Functions
 
@@ -91,6 +54,48 @@ function callback(){
     console.log("Hi!");
 };
 waitForABitThenRun(callback);
+```
+
+## Arrays
+
+```js
+// mixed types in arrays
+var numbers = [1, 2, 3];
+var stuff = ["Cherry", 43.5, ["a", "b", "c"]];
+
+// prints 1, 2, 3
+for (var i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+// prints [1, 2, 3, 4]
+numbers.push(4);
+console.log(numbers);
+```
+
+## Objects
+
+```js
+
+var movie = {
+    title: "Moneyball",
+    year: 2011,
+    tags: ["baseball", "oakland"],
+    synopsis: function() {
+        // `this` gives access to the object's other fields
+        console.log(this.title + ": " + this.year);
+    }
+};
+
+// prints 2011
+console.log(movie.year);
+
+// prints "Harry Potter"
+movie.title = "Harry Potter";
+console.log(movie.title);
+
+// prints "Harry Potter: 2011"
+console.log(movie.synopsis());
 ```
 
 ## Ajax
