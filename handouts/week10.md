@@ -89,6 +89,25 @@ console.log(movie.title);
 console.log(movie.synopsis());
 ```
 
+## jQuery
+
+```js
+// changes the HTML of the element with id `danger-button`
+$("#danger-button").html("Self destruct");
+
+// makes all paragraphs red
+$("p").attr("color", "red");
+
+// hides one button and shows another
+$("#old-text").hide();
+$("#new-text").show();
+
+// hides all paragraphs when button clicked
+$("#danger-button").on("click", function() {
+    $("p").hide();
+});
+```
+
 ## Ajax
 
 ```js
