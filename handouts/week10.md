@@ -98,9 +98,9 @@ $("#danger-button").html("Self destruct");
 // makes all paragraphs red
 $("p").attr("color", "red");
 
-// hides one button and shows another
-$("#old-text").hide();
-$("#new-text").show();
+// hides elements of class `old` and shows those of class `new`
+$(".old").hide();
+$(".new").show();
 
 // hides all paragraphs when button clicked
 $("#danger-button").on("click", function() {
