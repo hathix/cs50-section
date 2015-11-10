@@ -111,12 +111,14 @@ $.getJSON("api-endpoint.php", arguments)
 ## Templating
 
 ```js
+// prints "<a href='http://yale.edu' class='btn btn-danger'>Safety school</a>"
 var templateFunction = _.template("<a href='<%- url %>' class='btn btn-<%- btnClass %>'><%- text %></a>");
 var htmlString = templateFunction({
     url: "http://yale.edu",
     btnClass: "danger",
     text: "Safety school"
 });
+console.log(htmlString);
 ```
 
 # Challenge: Weather
