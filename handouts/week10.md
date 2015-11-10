@@ -127,3 +127,10 @@ var htmlString = templateFunction({
     text: "Safety school"
 });
 ```
+
+# Challenge: Ignite
+We're going to make a dating app where you can see people's bios and "swipe left" or "swipe right" on them. We're gonna be millionaires!
+
+Give it a shot: [http://is.gd/cs50_week10](http://is.gd/cs50_week10)
+
+Solution:
