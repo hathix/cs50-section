@@ -18,6 +18,59 @@ Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handou
 
 Stuff you gotta know
 
+## Arrays
+
+```js
+// working with arrays
+let numbers = [1,2,3];
+write(numbers);
+write(numbers.length);
+
+// reading and writing at indices
+write(numbers[0]);
+numbers[0] = numbers[2];
+write(numbers[0]);
+
+// mixed types in arrays
+let stuff = ["Toothpaste", 29, 1.55];
+write(stuff);
+
+// Challenge: swap elements 0 and 2
+let temp = stuff[0];
+stuff[0] = stuff[2];
+stuff[2] = temp;
+write(stuff);
+```
+
+## Objects
+
+```js
+// utility printing function
+let write = (text) => {
+  let message = $("<p>").html(text + "");
+  $("#output").append(message);
+};
+
+// object syntax
+let mySchool = {
+  name: "Harvard",
+  year: 1636
+};
+
+let theirSchool = {
+  name: "Yale",
+  year: 1701
+};
+
+// reading from objects
+write(mySchool.year);
+write(theirSchool.name);
+
+// writing to objects
+mySchool.year = theirSchool.year;
+write(mySchool.year);
+```
+
 ## Functions
 
 ```js
@@ -132,64 +185,6 @@ $("#clear").on("click", function() {
 ```
 
 ## Arrays
-
-```js
-// utility printing function
-let write = (text) => {
-  let message = $("<p>").html(text + "");
-  $("#output").append(message);
-};
-
-// working with arrays
-let numbers = [1,2,3];
-write(numbers);
-write(numbers.length);
-
-// reading and writing at indices
-write(numbers[0]);
-numbers[0] = numbers[2];
-write(numbers[0]);
-
-// mixed types in arrays
-let stuff = ["Toothpaste", 29, 1.55];
-write(stuff);
-
-// Challenge: swap elements 0 and 2
-let temp = stuff[0];
-stuff[0] = stuff[2];
-stuff[2] = temp;
-write(stuff);
-```
-
-## Objects
-
-```js
-// utility printing function
-let write = (text) => {
-  let message = $("<p>").html(text + "");
-  $("#output").append(message);
-};
-
-// object syntax
-let mySchool = {
-  name: "Harvard",
-  year: 1636
-};
-
-let theirSchool = {
-  name: "Yale",
-  year: 1701
-};
-
-// reading from objects
-write(mySchool.year);
-write(theirSchool.name);
-
-// writing to objects
-mySchool.year = theirSchool.year;
-write(mySchool.year);
-```
-
 ## Arrays of objects
 
 ```js
