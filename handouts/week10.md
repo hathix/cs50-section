@@ -21,54 +21,36 @@ Stuff you gotta know
 ## Arrays
 
 ```js
-// working with arrays
-let numbers = [1,2,3];
-write(numbers);
-write(numbers.length);
-
-// reading and writing at indices
-write(numbers[0]);
-numbers[0] = numbers[2];
-write(numbers[0]);
-
 // mixed types in arrays
-let stuff = ["Toothpaste", 29, 1.55];
-write(stuff);
+var numbers = [1, 2, 3];
+var stuff = ["Cherry", 43.5, ["a", "b", "c"]];
 
-// Challenge: swap elements 0 and 2
-let temp = stuff[0];
-stuff[0] = stuff[2];
-stuff[2] = temp;
-write(stuff);
+// prints 1, 2, 3
+for (var i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+// prints [1, 2, 3, 4]
+numbers.push(4);
+console.log(numbers);
 ```
 
 ## Objects
 
 ```js
-// utility printing function
-let write = (text) => {
-  let message = $("<p>").html(text + "");
-  $("#output").append(message);
+
+var movie = {
+    title: "Moneyball",
+    year: 2011,
+    tags: ["baseball", "oakland"]
 };
 
-// object syntax
-let mySchool = {
-  name: "Harvard",
-  year: 1636
-};
+// prints 2011
+console.log(movie.year);
 
-let theirSchool = {
-  name: "Yale",
-  year: 1701
-};
-
-// reading from objects
-write(mySchool.year);
-write(theirSchool.name);
-
-// writing to objects
-mySchool.year = theirSchool.year;
-write(mySchool.year);
+// prints "Harry Potter"
+movie.title = "Harry Potter";
+console.log(movie.title);
 ```
 
 ## Functions
@@ -182,26 +164,4 @@ $("#clear").on("click", function() {
   count = 0;
   $("#counter").html(count);
 });
-```
-
-## Arrays
-## Arrays of objects
-
-```js
-// utility printing function
-let write = (text) => {
-  let message = $("<p>").html(text + "");
-  $("#output").append(message);
-};
-
-// arrays of objects
-let schools = [
-  { name: "Harvard", year: 1636 },
-  { name: "Yale", year: 1701 },
-  { name: "Princeton", year: 1746 }
-];
-
-// mapping over object arrays
-let years = schools.map(school => school.year);
-write(years);
 ```
