@@ -133,4 +133,4 @@ We're going to make a dating app where you can see people's bios and "swipe left
 
 Give it a shot: [http://is.gd/cs50_week10](http://is.gd/cs50_week10)
 
-Solution:
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/10/igniter-soln.js](https://github.com/hathix/cs50-section/blob/master/code/10/igniter-soln.js)
