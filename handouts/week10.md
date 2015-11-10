@@ -7,6 +7,7 @@ Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handou
 
 # JavaScript
 ## Functions
+Like your normal C/PHP functions, but on steroids! Like PHP, there are no explicit types, and you don't have to prefix every variable with `$` like in PHP.
 
 ```js
 // "function declaration" syntax
@@ -48,6 +49,7 @@ waitForABitThenRun(callback);
 ```
 
 ## Arrays
+Like PHP arrays!
 
 ```js
 // mixed types in arrays
@@ -65,6 +67,7 @@ console.log(numbers);
 ```
 
 ## Objects
+Kind of like associative arrays in PHP, but cooler! Since functions are just like other data types, you can include them in objects too.
 
 ```js
 
@@ -90,6 +93,7 @@ console.log(movie.synopsis());
 ```
 
 ## jQuery
+jQuery (`$`) lets you manipulate the DOM really easily and adds kinds of other cool features.
 
 ```js
 // changes the HTML of the element with id `danger-button`
@@ -109,11 +113,13 @@ $("#danger-button").on("click", function() {
 ```
 
 ## Ajax
+Ajax lets you query PHP files through JavaScript without refreshing the page.
 
 ```js
 var arguments = {
     key: "value"
 };
+// notice that jQuery lets you do Ajax, too!
 $.getJSON("api-endpoint.php", arguments)
 .done(function(data, textStatus, jqXHR) {
     // success!
@@ -128,6 +134,7 @@ $.getJSON("api-endpoint.php", arguments)
 ```
 
 ## Templating
+Underscore (`_`) is a utility library that lets you template a la PHP (cf. `<?= $variable; ?>`.)
 
 ```js
 // prints "<a href='http://yale.edu' class='btn btn-danger'>Safety school</a>"
