@@ -10,12 +10,6 @@ Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handou
 - CS50 APIs (course information, building info, HUDS menus): [https://docs.cs50.net/docs](https://docs.cs50.net/docs)
 
 # JavaScript
-## TODOS
-- run this all on codepen
-- counter button example
-
-Stuff you gotta know
-
 ## Functions
 
 ```js
@@ -131,6 +125,6 @@ var htmlString = templateFunction({
 # Challenge: Ignite
 We're going to make a dating app where you can see people's bios and "swipe left" or "swipe right" on them. We're gonna be millionaires!
 
-Give it a shot: [http://is.gd/cs50_week10](http://is.gd/cs50_week10)
+Give it a shot: [http://is.gd/cs50_ignite](http://is.gd/cs50_ignite)
 
 Solution: [https://github.com/hathix/cs50-section/blob/master/code/10/igniter-soln.js](https://github.com/hathix/cs50-section/blob/master/code/10/igniter-soln.js)
