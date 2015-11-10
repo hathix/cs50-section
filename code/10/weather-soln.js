@@ -14,7 +14,7 @@ function getAjaxURL(cityCode) {
 // loads the interface with the weather info for the given city.
 function loadWeather(city) {
   // fill in city name
-  $('#weather-city').html(city.name);
+  $("#weather-city").html(city.name);
 
   // grab city weather
   $.getJSON(getAjaxURL(city.code))
@@ -28,7 +28,7 @@ function loadWeather(city) {
         "<strong><%- temp %>F</strong> and <%- text %>"
       );
       var htmlString = templateFunction(condition);
-      $('#weather-conditions').html(htmlString);
+      $("#weather-conditions").html(htmlString);
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
       console.log(errorThrown.toString());

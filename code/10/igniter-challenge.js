@@ -19,7 +19,7 @@ function loadPerson() {
 loadPerson();
 
 // advance to the next person when the user swipes
-$('#like').on('click', function(){
+$("#like").on("click", function(){
     // TODO
 
 

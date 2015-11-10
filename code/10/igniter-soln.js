@@ -12,21 +12,21 @@ function loadPerson() {
     "<h3><strong><%- name %></strong>, <%- age %></h3><p><%- bio %></p>"
   );
   var htmlString = templateFunction(person);
-  $('#person-info').html(htmlString);
+  $("#person-info").html(htmlString);
 }
 
 // loads the first person
 loadPerson();
 
 // advance to the next person when the user swipes
-$('#like').on('click', function(){
+$("#like").on("click", function(){
   if (activeIndex < people.length - 1) {
     activeIndex++;
   }
   loadPerson();
 });
 // optional
-$('#dislike').on('click', function(){
+$("#dislike").on("click", function(){
   if (activeIndex < people.length - 1) {
     activeIndex++;
   }
