@@ -88,33 +88,6 @@ var htmlString = templateFunction({
 });
 ```
 
-**JavaScript**
-
-```js
-// utility printing function (don't worry about this)
-let write = (text) => {
-  let message = $("<p>").html(text + "");
-  $("#output").append(message);
-};
-
-// variables and functions
-let number = 5;
-number = number * 3;
-write(number);
-
-// creating functions
-let writeExcited = (text) => {
-    write(text + "!!!")
-};
-
-// calling functions
-writeExcited("hey");
-
-// calling multi-argument functions
-let bigger = Math.max(2, 7);
-write(bigger);
-```
-
 # jQuery
 Here's HTML for a simple counter app:
 
@@ -156,38 +129,6 @@ $("#clear").on("click", function() {
   count = 0;
   $("#counter").html(count);
 });
-```
-
-**New JavaScript (using functions)**
-
-```js
-let count = 0;
-
-let update = (newCount) => {
-  count = newCount;
-  $("#counter").html(newCount);
-};
-
-$("#add").on("click", function() {
-  update(count + 1);
-});
-
-// subtract: do this yourself!
-$("#subtract").on("click", function() {
-  update(count - 1);
-});
-
-// clear: do this yourself!
-$("#clear").on("click", function() {
-  update(0);
-});
-```
-
-# Advanced JavaScript and ES6
-**HTML for all examples in this section**
-
-```html
-<p class="lead" id="output"></p>
 ```
 
 ## Arrays
