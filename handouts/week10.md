@@ -40,6 +40,7 @@ console.log(call(function(a, b){
 Functions that you pass to other functions are called _callbacks_.
 
 ```js
+// prints "Hi!"
 function callback(){
     console.log("Hi!");
 };
