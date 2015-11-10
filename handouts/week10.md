@@ -122,6 +122,13 @@ var htmlString = templateFunction({
 });
 ```
 
+# Challenge: Weather
+We're going to make a simple weather app!
+
+Give it a shot: [http://is.gd/cs50_weather](http://is.gd/cs50_weather)
+
+Solution: [https://github.com/hathix/cs50-section/blob/master/code/10/weather-soln.js](https://github.com/hathix/cs50-section/blob/master/code/10/weather-soln.js)
+
 # Challenge: Ignite
 We're going to make a dating app where you can see people's bios and "swipe left" or "swipe right" on them. We're gonna be millionaires!
 
