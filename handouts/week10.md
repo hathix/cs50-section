@@ -6,8 +6,10 @@ Neel Mehta. neelmehta@college.harvard.edu. (215) 990-6434.
 Get these handouts at [https://github.com/hathix/cs50-section/tree/master/handouts](https://github.com/hathix/cs50-section/tree/master/handouts).
 
 # JavaScript
+Syntactically very similar to C and PHP. Like PHP, it's _interpreted_, has no explicit variable types (but you don't need that `$` at the start of every variable name), and is used to code the web (mostly the frontend but also the backend.)
+
 ## Functions
-Like your normal C/PHP functions, but on steroids! Like PHP, there are no explicit types, and you don't have to prefix every variable with `$` like in PHP.
+There are 2 syntaxes you can use!
 
 ```js
 // "function declaration" syntax
@@ -21,7 +23,7 @@ var subtract = function(a, b) {
 };
 ```
 
-**Functions are variables!**
+**Functions are data types** just like integers, strings, etc!
 
 ```js
 function call(myFunction, x, y) {
@@ -41,11 +43,12 @@ console.log(call(function(a, b){
 Functions that you pass to other functions are called _callbacks_.
 
 ```js
-// prints "Hi!"
+// alerts "Sorry for the delay!" after 5 seconds
 function callback(){
-    console.log("Hi!");
+    console.log("Sorry for the delay!");
 };
-waitForABitThenRun(callback);
+// setTimeout executes the given function after the given number of milliseconds
+setTimeout(callback, 5000);
 ```
 
 ## Arrays
@@ -77,7 +80,7 @@ var movie = {
     tags: ["baseball", "oakland"],
     synopsis: function() {
         // `this` gives access to the object's other fields
-        console.log(this.title + ": " + this.year);
+        return this.title + ": " + this.year;
     }
 };
 
@@ -96,6 +99,7 @@ console.log(movie.synopsis());
 jQuery (`$`) lets you manipulate the DOM really easily and adds kinds of other cool features.
 
 ```js
+// `$` is just a function with a really short name!
 // changes the HTML of the element with id `danger-button`
 $("#danger-button").html("Self destruct");
 
@@ -116,11 +120,8 @@ $("#danger-button").on("click", function() {
 Ajax lets you query PHP files through JavaScript without refreshing the page.
 
 ```js
-var arguments = {
-    key: "value"
-};
 // notice that jQuery lets you do Ajax, too!
-$.getJSON("api-endpoint.php", arguments)
+$.getJSON("get-scores.php", { team: "Boston Red Sox" })
 .done(function(data, textStatus, jqXHR) {
     // success!
     // data is a JavaScript object; ignore the other 2 variables
