@@ -27,6 +27,8 @@ Stuff to keep in mind:
 
 # Challenges
 ## Form validation (2014 fall #15-16)
+_Solutions: [http://cdn.cs50.net/2014/fall/quizzes/1/key1.pdf](http://cdn.cs50.net/2014/fall/quizzes/1/key1.pdf)_
+
 Consider the HTML below.
 
 ```html
@@ -84,6 +86,8 @@ $(function(){
 ```
 
 ## Binary search trees (2013 fall #32-34)
+_Solutions: [http://cdn.cs50.net/2013/fall/quizzes/1/key1.pdf](http://cdn.cs50.net/2013/fall/quizzes/1/key1.pdf)_
+
 Recall that a binary search tree (BST) is a binary tree (each of whose nodes has 0, 1, or 2 children), the value of whose root is: greater than its left child, if any, and any descendants theref; and less than that of its right child, if any, and any descendants thereof. Moreover, each child is the root of a BST.
 
 ### BST
