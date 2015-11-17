@@ -25,6 +25,62 @@ Stuff to keep in mind:
 - Review session slides: [http://cdn.cs50.net/2015/fall/quizzes/1/review1.pdf](http://cdn.cs50.net/2015/fall/quizzes/1/review1.pdf)
 - Video about MVC: [https://www.youtube.com/watch?v=vqcQD-HmLl8](https://www.youtube.com/watch?v=vqcQD-HmLl8)
 
+# Challenges
+## Form submission (2014 fall #15-16)
+Consider the HTML below.
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/scripts.js"></script>
+  <title>Frosh IMs</title>
+</head>
+
+<body>
+  <form action="/register.php" id="registration" method="get">
+    <input id="name" name="name" placeholder="Name" type="text" />
+    <br />
+    <select id="dorm" name="dorm" size="1">
+      <option value="">
+        Dorm
+      </option>
+      <option value="Matthews Hall">Matthews Hall</option>
+      <option value="Other">Other</option>
+    </select>
+    <br/>
+    <input type="submit" value="Register" />
+  </form>
+</body>
+
+</html>
+```
+
+Suppose that David from Matthews Hall submits this form. Complete the request line below of the HTTP request that the form's submission will generate.
+
+```
+GET
+```
+
+Complete the implementation of `scripts.js` below in such a way that it prevents the form's submission if a user fails to input a name or select a dorm.
+
+```js
+$(function(){
+
+
+
+
+
+
+
+
+
+
+});
+```
+
 # Stuff for your cheat sheet
 ## Algorithms
 
