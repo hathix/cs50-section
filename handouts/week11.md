@@ -26,7 +26,7 @@ Stuff to keep in mind:
 - Video about MVC: [https://www.youtube.com/watch?v=vqcQD-HmLl8](https://www.youtube.com/watch?v=vqcQD-HmLl8)
 
 # Challenges
-## Form submission (2014 fall #15-16)
+## Form validation (2014 fall #15-16)
 Consider the HTML below.
 
 ```html
@@ -58,12 +58,14 @@ Consider the HTML below.
 </html>
 ```
 
+### Request line
 Suppose that David from Matthews Hall submits this form. Complete the request line below of the HTTP request that the form's submission will generate.
 
 ```
 GET
 ```
 
+### jQuery
 Complete the implementation of `scripts.js` below in such a way that it prevents the form's submission if a user fails to input a name or select a dorm.
 
 ```js
@@ -81,6 +83,33 @@ $(function(){
 });
 ```
 
+## Binary search trees (2013 fall #32-34)
+Recall that a binary search tree (BST) is a binary tree (each of whose nodes has 0, 1, or 2 children), the value of whose root is: greater than its left child, if any, and any descendants theref; and less than that of its right child, if any, and any descendants thereof. Moreover, each child is the root of a BST.
+
+### BST
+Consider the binary search tree whose nodes do not yet have values.
+
+![Binary search tree](img/bst.png)
+
+Insert the six integers below into that tree, as by writing one integer in each circle, in such a way that the tree is a BST.
+
+> 34, 59, 20, 106, 36, 52
+
+### Node
+Complete the definition of `node` below in such a way that it represents a node in a BST, the value of which is of type `int`. You may name its fields however you'd like.
+
+```c
+typedef struct node {
+
+
+
+
+}
+node;
+```
+
+### Traverse
+## SQL
 # Stuff for your cheat sheet
 ## Algorithms
 
