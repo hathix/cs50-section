@@ -41,14 +41,15 @@ More at [http://www.bigocheatsheet.com/](http://www.bigocheatsheet.com/).
 
 ## Data structures
 
-Operation                                  | Worst-case | Best-case
------------------------------------------- | ---------- | ---------
-Insertion into hash table                  | O(1)       | Ω(1)
-Search through hash table with `k` buckets | O(n/k)     | Ω(1)
-Insertion into trie                        | O(1)       | Ω(1)
-Insertion into front of linked list        | O(1)       | Ω(1)
-Search through linked list (sorted or not) | O(n)       | Ω(1)
-Deletion from linked list (sorted or not)  | O(n)       | Ω(1)
+Operation                                      | Worst-case | Best-case
+---------------------------------------------- | ---------- | ---------
+Insertion into hash table w/ separate chaining | O(1)       | Ω(1)
+Search through hash table with `k` buckets     | O(n/k)     | Ω(1)
+Insertion into trie                            | O(1)       | Ω(1)
+Insertion into unsorted linked list            | O(1)       | Ω(1)
+Insertion into sorted linked list              | O(n)       | Ω(1)
+Search through linked list (sorted or not)     | O(n)       | Ω(1)
+Deletion from linked list (sorted or not)      | O(n)       | Ω(1)
 
 ## Data types
 The below are for a 64-bit machine (so named because pointers are 64 bits) like the CS50 IDE.
@@ -59,6 +60,7 @@ The below are for a 64-bit machine (so named because pointers are 64 bits) like 
 
 - Unsigned types are the same size as the normal types (e.g. `unsigned int`, like `int`, is 4 bytes)
 - All pointers are the same size (e.g. `double*`, like `int*`, is 8 bytes)
+- A `struct`'s size is the sum of the sizes of its components.
 
 ## Useful functions
 ![Table of common functions and their usage](img/standard-library.png)
@@ -102,3 +104,45 @@ Code | HTTP Status                | Description/Cause
 500  | Internal Server Error      | Server's fault: MySQL failed, error parsing PHP, bad config files, etc.
 501  | Not Implemented            | Server doesn't know how to handle that mimetype                         |
 505  | HTTP Version Not Supported | Request used wrong HTTP version (HTTP/1.1 needed)
+
+## SQL
+
+```sql
+# select: get rows
+SELECT name FROM movies
+SELECT * FROM movies WHERE year = 2008 AND stars = 4
+SELECT name, stars FROM movies WHERE id = 5
+
+# insert: add rows
+INSERT INTO movies (name, year, stars) VALUES ("Finding Nemo", 2003, 5)
+
+# update: change rows
+UPDATE movies SET stars = 3 WHERE id = 9
+UPDATE movies SET stars = stars + 1 WHERE id = 3
+
+# delete: remove rows
+DELETE FROM movies WHERE stars = 0
+```
+
+## jQuery
+
+```js
+// click handlers
+$("#my-button").click(function(){
+    // do something
+});
+
+// changing html
+$("#my-element").html("<strong>Cool new HTML</strong>");
+
+// getting values from input fields
+var input = $("#my-text-input").val();
+
+// form validation
+$("#my-form").submit(function(){
+    if (/* something wrong in form */) {
+        return false;
+    }
+    return true;
+});
+```
