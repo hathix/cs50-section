@@ -79,12 +79,12 @@ To successfully `GET` a file, the file must be world-readable, and all of its an
 
 **Recommended permissions:**
 
-File/directory type | Permission | Representation
-------------------- | ---------- | --------------
-Public folders      | 711        | `drwx--x--x`
-Non-public folders  | 700        | `drwx------`
-PHP files           | 600        | `-rw-------`
-Non-PHP files       | 644        | `-rw-r--r--`
+File/directory type    | Permission | Representation
+---------------------- | ---------- | --------------
+Public directories     | 711        | `drwx--x--x`
+Non-public directories | 700        | `drwx------`
+PHP files              | 600        | `-rw-------`
+Non-PHP files          | 644        | `-rw-r--r--`
 
 ## HTTP status codes
 
