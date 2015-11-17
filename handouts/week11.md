@@ -131,7 +131,13 @@ void traverse(node* root)
 }
 ```
 
-## SQL
+## SQL (2013 fall #26-29)
+_Solutions: [http://cdn.cs50.net/2013/fall/quizzes/1/key1.pdf](http://cdn.cs50.net/2013/fall/quizzes/1/key1.pdf)_
+
+Suppose that a bank relies on an SQL table called `accounts` to store customers' accounts, wherein `number` (the table's `PRIMARY` key) represents a user's 12-digit account number, and `balance` represents how much money the customer has in his or her account, per the (incomplete) schema below. As per the default value of `100.00` for `balance`, the bank gives customers $100 anytime they open an account.
+
+![Bank SQL schema](img/sql-schema.png)
+
 # Stuff for your cheat sheet
 ## Algorithms
 
