@@ -62,9 +62,6 @@ The below are for a 64-bit machine (so named because pointers are 64 bits) like 
 - All pointers are the same size (e.g. `double*`, like `int*`, is 8 bytes)
 - A `struct`'s size is the sum of the sizes of its components.
 
-## Useful functions
-![Table of common functions and their usage](img/standard-library.png)
-
 ## Common errors
 
 Error                                                  | Why it happened
