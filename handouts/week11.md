@@ -109,6 +109,24 @@ node;
 ```
 
 ### Traverse
+Complete the implementation of `traverse` below in such a way that, given the root of a BST, the function performs an "in-order traversal," printing each of the tree's integers with `printf` from smallest to largest, one per line. Assume that `node` is defined per your own implementation one problem ago. Do not assume that `root` will be non-`NULL`.
+
+```c
+void traverse(node* root)
+{
+
+
+
+
+
+
+
+
+
+
+}
+```
+
 ## SQL
 # Stuff for your cheat sheet
 ## Algorithms
