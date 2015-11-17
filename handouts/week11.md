@@ -16,6 +16,7 @@ _Wed 11/18, 1-2p_. Quiz info: [http://cdn.cs50.net/2015/fall/quizzes/1/harvard.h
 - Week 10. Security. Artificial intelligence.
 
 Stuff to keep in mind:
+
 - Huffman coding might pop up on the exam: [https://study.cs50.net/huffman](https://study.cs50.net/huffman)
 - Looks like you should review the AI guest lectures.
 - Security will likely be on the exam.
