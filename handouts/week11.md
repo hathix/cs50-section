@@ -138,6 +138,30 @@ Suppose that a bank relies on an SQL table called `accounts` to store customers'
 
 ![Bank SQL schema](img/sql-schema.png)
 
+### Schema
+Complete the schema for `accounts` above by specifying next to `number` and `balance` on the schema itself, an appropriate SQL type for each.
+
+### Maintenance
+Suppose that the bank imposes a $20 "monthly maintenance fee" on all accounts. With what SQL query could the bank deduct $20 from every account (even if it resuls in some negative balances?)
+
+```sql
+
+```
+
+### Richest
+With what SQL query could the bank retrieve the account numbers of its richest customers, those with balances greater than $1000?
+
+```sql
+
+```
+
+### Close
+With what SQL query could the bank close (i.e. delete) every account that has a balance of $0?
+
+```sql
+
+```
+
 # Stuff for your cheat sheet
 ## Algorithms
 
