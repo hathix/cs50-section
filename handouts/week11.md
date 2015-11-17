@@ -41,13 +41,14 @@ More at [http://www.bigocheatsheet.com/](http://www.bigocheatsheet.com/).
 
 ## Data structures
 
-Operation                                      | Worst-case | Best-case
----------------------------------------------- | ---------- | ---------
-Insertion into hash table w/ separate chaining | O(1)       | Ω(1)
-Insertion into trie                            | O(1)       | Ω(1)
-Insertion into front of linked list            | O(1)       | Ω(1)
-Search through linked list (sorted or not)     | O(n)       | Ω(1)
-Deletion from linked list (sorted or not)      | O(n)       | Ω(1)
+Operation                                  | Worst-case | Best-case
+------------------------------------------ | ---------- | ---------
+Insertion into hash table                  | O(1)       | Ω(1)
+Search through hash table with `k` buckets | O(n/k)     | Ω(1)
+Insertion into trie                        | O(1)       | Ω(1)
+Insertion into front of linked list        | O(1)       | Ω(1)
+Search through linked list (sorted or not) | O(n)       | Ω(1)
+Deletion from linked list (sorted or not)  | O(n)       | Ω(1)
 
 ## Data types
 The below are for a 64-bit machine (so named because pointers are 64 bits) like the CS50 IDE.
@@ -73,6 +74,18 @@ more '%' conversions than data arguments               | You called, e.g., `prin
 definitely lost: # bytes in # blocks                   | You forgot to `free` memory you allocated with `malloc`
 invalid write of size #                                | You tried changing a value beyond the end of an array
 use of undeclared identifier                           | You forgot to declare the variable, or it's out of scope
+
+## File permissions
+To successfully `GET` a file, the file must be world-readable, and all of its ancestor directories must be world-executable.
+
+**Recommended permissions:**
+
+File/directory type | Permission | Representation
+------------------- | ---------- | --------------
+Public folders      | 711        | `drwx--x--x`
+Non-public folders  | 700        | `drwx------`
+PHP files           | 600        | `-rw-------`
+Non-PHP files       | 644        | `-rw-r--r--`
 
 ## HTTP status codes
 
