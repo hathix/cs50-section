@@ -39,6 +39,16 @@ Merge sort     | Recursively sorts a list by partitioning and merging       | O(
 
 More at [http://www.bigocheatsheet.com/](http://www.bigocheatsheet.com/).
 
+## Data structures
+
+Operation                                      | Worst-case | Best-case
+---------------------------------------------- | ---------- | ---------
+Insertion into hash table w/ separate chaining | O(1)       | Ω(1)
+Insertion into trie                            | O(1)       | Ω(1)
+Insertion into front of linked list            | O(1)       | Ω(1)
+Search through linked list (sorted or not)     | O(n)       | Ω(1)
+Deletion from linked list (sorted or not)      | O(n)       | Ω(1)
+
 ## Data types
 The below are for a 64-bit machine (so named because pointers are 64 bits) like the CS50 IDE.
 
